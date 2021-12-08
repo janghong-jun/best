@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 211112 수정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>홈트레이닝 상세 | 명의</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel=" shortcut icon" href="../images/favicon.ico">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+<div class="skip-nav">
+    <a href="#gnb" class="skip-nav__item">주메뉴바로가기</a>
+    <a href="#container" class="skip-nav__item">본문바로가기</a>
+</div>
+
+<div id="wrap">
+	<div class="header">
+		<div class="utilbar">
+			<div class="utilWrap">
+				<div class="ebslogo"><a href="https://www.ebs.co.kr"><span class="blind">ebs</span></a></div>
+				<div class="rightMenu">
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="https://www.ebs.co.kr/customer">고객센터</a></li>
+						<li><a href="https://www.ebs.co.kr/package/freeticket?mainTop?#S05">구독하기</a></li>
+						<li class="tlogDrop">
+							<a href="#">다른 사이트 둘러보기<i></i></a>
+							<ul class="tlogSub sub2by">
+								<li><a href="https://5dang.ebs.co.kr">오디오 어학당</a></li>
+								<li><a href="https://5easy.ebs.co.kr">오디오e지식</a></li>
+								<li><a href="https://anikids.ebs.co.kr">애니키즈</a></li>
+								<li><a href="https://classe.ebs.co.kr">CLASSⓔ</a></li>
+								<li><a href="https://docuprime.ebs.co.kr">다큐프라임</a></li>
+								<li><a href="https://worldtrip.ebs.co.kr">세상의 모든 기행</a></li>
+								<li><a href="https://jisike.ebs.co.kr">지식채널ⓔ</a></li>
+								<li><a href="https://ebr.ebs.co.kr">EBS 비즈니스 리뷰</a></li>
+								<li><a href="https://dbox.ebs.co.kr/dbox">D-Box</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header__inner">
+			<div class="header-top">
+				<h1 class="header-logo">
+					<a href="#" class="header-logo__anchor"><span class="blind">명의 헬스케어</span></a>
+				</h1>
+				<!-- 211025 수정 -->
+				<button type="button" class="total-menu mobile"><span class="blind">메뉴열기</span></button>
+				<div class="header-utill">
+					<button type="button" class="header-utill__button header-utill__button--subscribe">구독</button>
+					<!-- 211101 수정 -->
+					<button type="button" class="header-utill__button header-utill__button--bookmark"><span class="blind">MY 프로그램</span></button>
+					<button type="button" class="header-utill__button header-utill__button--share"><span class="blind">공유하기</span></button>
+				</div>	
+			</div>
+			<div class="header-bottom">
+				<ul class="gnb" id="gnb">
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">명의 헬스케어란?</a>
+						<ul class="gnb__2depth">
+							<!-- 211116 기획 수정 -->
+							<li><a href="#">명의 선정기준</a></li>
+							<!-- 211116 기획 수정 -->
+							<li><a href="#">명의 프로그램 소개</a></li>
+							<li><a href="#">서비스 소개</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">방송보기</a>
+						<ul class="gnb__2depth">
+							<li><a href="#">다시보기</a></li>
+							<li><a href="#">미리보기</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">명의 건강정보</a>
+						<ul class="gnb__2depth">
+							<li><a href="#">카드뉴스</a></li>
+							<li><a href="#">칼럼</a></li>
+							<li><a href="#">클립</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item">
+						<a href="#" class="gnb__anchor">명의 검색</a>
+					</li>
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">게시판</a>
+						<ul class="gnb__2depth">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">시청자 게시판</a></li>
+							<!-- 211116 기획 수정 -->
+							<li><a href="#">명의에게 묻는다</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item">
+						<a href="#" class="gnb__anchor">MY 명의</a>
+					</li>
+				</ul>
+				<div class="search">
+					<!-- 211025 수정 -->
+					<!-- 211116 기획 수정 -->
+					<button type="button" class="search__anatomy"><span>인체도검색</span></button>
+					<button type="button" class="search__toggle-button"><span class="blind">검색하기</span></button>
+					<div class="search__total">
+						<input type="text" class="search__text" title="검색어 입력" placeholder="검색어를 입력해주세요">
+						<button type="button" class="search__button"><span class="blind">검색</span></button>
+					</div>
+					<!-- //211025 수정 -->
+				</div>
+			</div>
+		</div>
+		<div class="m-header">
+			<div class="m-header__mask"></div>
+			<!-- 로그인 상태시 is-login 클래스 추가 -->
+			<div class="m-header__inner is-login">
+				<div class="m-header__top">
+					<!-- 211103 삭제 -->
+					<!-- <a href="#" class="m-header__logo"><span class="blind">명의</span></a> -->
+					<a href="#" class="m-header__bookmark"><span class="blind">MY 프로그램</span></a>
+					<button type="button" class="m-header__login">로그인</button>
+					<button type="button" class="m-header__logout">로그아웃</button>
+				</div>
+				<!-- 211103 수정 -->
+				<div class="m-scroll-wrap">
+					<div class="m-login">
+						<!-- 211103 수정 -->
+						<div class="m-login__text"><span>홍길동</span>님 환영합니다.</div>
+						<div class="m-login__button-area">
+							<a href="#" class="m-login__button">마이페이지</a>
+							<a href="#" class="m-login__button">구독</a>
+							<a href="#" class="m-login__button">고객센터</a>
+							<a href="#" class="m-login__button">회원정보수정</a>
+						</div>
+					</div>
+					<ul class="m-nav">
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">명의 헬스케어란?</a>
+							<ul class="m-nav__sub">
+								<!-- 211116 기획 수정 -->
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">명의 선정기준</a></li>
+								<!-- 211116 기획 수정 -->
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">명의 프로그램 소개</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">서비스 소개</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">건강정보</a>
+							<ul class="m-nav__sub">
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">카드뉴스</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">칼럼</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">클립</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">방송보기</a>
+							<ul class="m-nav__sub">
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">다시보기</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">미리보기</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">명의검색</a>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">게시판</a>
+							<ul class="m-nav__sub">
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">공지사항</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">시청자 게시판</a></li>
+								<!-- 211116 기획 수정 -->
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">명의에게 묻는다</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">MY 명의</a>
+						</li>
+						<!-- 211025 삭제 -->
+						<!-- <li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">인체도 질병 검색</a>
+						</li> -->
+						<!-- //211025 삭제 -->
+					</ul>
+					<div class="m-header__bottom">
+						<a href="#" class="m-header__subscribe">구독하기</a>
+						<!-- 211101 수정 -->
+						<a href="#" class="m-header__ebs">EBS메인 바로가기</a>
+						<!-- 211103 수정 -->
+						<div class="m-service">
+							<div class="m-service__title">EBS 서비스 바로가기</div>
+							<ul>
+								<li><a href="https://5dang.ebs.co.kr">오디오 어학당</a></li>
+								<li><a href="https://5easy.ebs.co.kr">오디오e지식</a></li>
+								<li><a href="https://anikids.ebs.co.kr">애니키즈</a></li>
+								<li><a href="https://classe.ebs.co.kr">CLASSⓔ</a></li>
+								<li><a href="https://docuprime.ebs.co.kr">다큐프라임</a></li>
+								<li><a href="https://worldtrip.ebs.co.kr">세상의 모든 기행</a></li>
+								<li><a href="https://jisike.ebs.co.kr">지식채널ⓔ</a></li>
+								<li><a href="https://ebr.ebs.co.kr">EBS 비즈니스 리뷰</a></li>
+								<li><a href="https://dbox.ebs.co.kr/dbox">D-Box</a></li>
+							</ul>
+						</div>
+						<!-- //211103 수정 -->
+					</div>
+				</div>
+				<!-- //211103 수정 -->
+				<button type="button" class="m-header__close"><span class="blind">메뉴 닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!--  e : header -->
+	<div class="total-search">
+		<div class="total-search__inner">
+			<!-- 211108 추가 -->
+			<div class="total-search__section mobile">
+				<div class="total-search__keyword">
+					<input type="text" class="total-search__text" title="검색어 입력" placeholder="검색어를 입력해주세요">
+					<button type="button" class="total-search__button"><span class="blind">검색</span></button>
+				</div>
+			</div>
+			<!-- //211108 추가 -->
+			<div class="total-search__section">
+				<div class="total-search__title">추천 검색어</div>
+				<div class="key-word">
+					<a href="#" class="key-word__item">부정맥</a>
+					<a href="#" class="key-word__item">심근증</a>
+					<a href="#" class="key-word__item">심부전증</a>
+					<a href="#" class="key-word__item">판막질환</a>
+				</div>
+			</div>
+			<div class="total-search__section">
+				<div class="total-search__title">최근 검색어</div>
+				<div class="key-word key-word--gray">
+					<a href="#" class="key-word__item">심부전증</a>
+					<a href="#" class="key-word__item">하지정맥</a>
+					<a href="#" class="key-word__item">빈혈</a>
+					<a href="#" class="key-word__item">치질</a>
+					<a href="#" class="key-word__delete"><span class="blind">검색어 삭제</span></a>
+				</div>
+			</div>
+			<div class="total-search__section">
+				<!-- 211116 기획 수정 -->
+				<div class="total-search__title">최신 방송 명의</div>
+				<div class="best-doctor">
+					<!-- 211108 추가 -->
+					<div class="best-doctor__inner">
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search01.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">혈액종양내과</div>
+							<div class="best-doctor__name">김수정</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search02.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">정형외과</div>
+							<div class="best-doctor__name">최윤락</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search03.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">심장내과</div>
+							<div class="best-doctor__name">정보영</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search04.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">피부과</div>
+							<div class="best-doctor__name">문재호</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search05.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">정형외과</div>
+							<div class="best-doctor__name">김양수</div>
+						</a>
+					</div>
+					<!-- //211108 추가 -->
+				</div>
+			</div>
+			<button class="total-search__close"><span class="blind">통합 검색 닫기</span></button>
+		</div>
+		<div class="total-search__dim"></div>
+	</div>
+	<!-- 211027 인체도검색 추가 -->
+	<div class="anatomy-search">
+		<div class="anatomy-search__inner">
+			<div class="anatomy-search__images">
+				<img class="anatomy-search__image" src="../images/common/bg_anatomy.png" alt="">
+			</div>
+			<div class="anatomy-search__contents">
+				<div class="anatomy-search__title">신체부위 선택</div>
+				<div class="anatomy-search__list">
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">전신</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">머리</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">정신</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">얼굴</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">목</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">가슴/등</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">복부</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">생식기/비뇨기</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">팔/손</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">다리/발</button></div>
+					<!-- 211117 기획 수정 -->
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">허리/엉덩이</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">근육/피부</button></div>
+				</div>
+				<div class="anatomy-search__title">질병 선택</div>
+				<ul class="search-kategorie__list search-kategorie__list--half scroll">
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">간암</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">폐암</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">간질</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">심장판막</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">위암</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">간염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">위염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">식도염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">역류성 식도염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">위경련</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">폐혈증</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">심혈관비데증</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">심부전증</a></li>
+				</ul>
+			</div>
+			<button class="anatomy-search__close"><span class="blind">인체도 검색 닫기</span></button>
+		</div>
+		<div class="anatomy-search__dim"></div>
+	</div>
+	<!-- //211027 인체도검색 추가 -->
+
+    <div id="container" class="container">
+        <div class="section section--space">
+            <div class="section__inner">
+                <div class="detail-page is-active">
+                    <div class="detail-page__title">[정형외과 전문의 김양수 교수] 어깨 통증에는 무조건 운동이 좋나요?</div>
+                    <div class="detail-page__contents">
+                        <div class="detail-page__video">
+                            <div class="detail-page__video-wrap">
+                                <!-- 영상 영역 -->
+                                <img src="../images/img_video.jpg" alt="">
+                                <button class="detail-page__video-close"><span class="blind">플로팅 해제</span></button>
+                            </div>
+                        </div>
+                        <div class="detail-page__text">겨울철 주의해야 할 질병으로 알려진 뇌졸중, 하지만 여름철 뇌졸중 환자가 늘어나는 이유가 무엇일까 여름철 뇌졸중, <br>뇌경색에 대해 제주대병원 최재철 교수와 함께 알아보자!</div>
+                        <!-- 숨겨진 컨텐츠 -->
+                        <div class="detail-page__text" data-element="toggle-list">2겨울철 주의해야 할 질병으로 알려진 뇌졸중, 하지만 여름철 뇌졸중 환자가 늘어나는 이유가 무엇일까 여름철 뇌졸중, 뇌경색에 대해 제주대병원 최재철 교수와 함께 알아보자!</div>
+                        <button type="button" class="detail-page__more toggle-button" data-element="toggle-btn">내용 더 보기</button>
+                        
+                    </div>
+                    <div class="utill">
+                        <button type="button" class="button button__utill button__utill--bookmark"><span class="blind">즐겨찾기</span></button>
+                        <button type="button" class="button button__utill button__utill--share"><span class="blind">공유하기</span></button>
+                    </div>
+                    <div class="button-wrap button-wrap--right">
+                        <a href="#" class="button button__round">목록으로</a>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment__total">
+                        <div class="comment__title">댓글</div>
+                        <div class="comment__number">총 <span>2</span>개</div>
+                    </div>
+
+                    <!-- 로그인 전 -->
+                    <div class="comment__form" style="display: none;">
+                        <div class="comment__wrap">
+                            <button type="button" class="comment__textarea">댓글을 남기려면 로그인 해주세요</button>
+                        </div>
+                        <button type="button" class="comment__submit">등록</button>
+                        <div class="comment-sns">
+                            <span class="comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></span>
+                            <span class="comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></span>
+                            <span class="comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></span>
+                        </div>
+                    </div>                        
+                    <!-- 로그인 후 -->
+                    <div class="comment__form">
+                        <div class="comment__wrap">
+                            <div class="comment__info">
+                                <div class="comment__writer">홍길동</div>
+                                <div class="comment__bytes"><span>0</span>/250 bytes</div>
+                            </div>
+                            <textarea class="comment__textarea" title="댓글 입력" placeholder="댓글을 입력해주세요"></textarea>
+                        </div>
+                        <button type="button" class="comment__submit">등록</button>
+                        <div class="comment-sns">
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></button>
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></button>
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 211116 기획 수정 -->
+                <div class="comment-sort">
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor is-active">최신순</a></div>
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor">인기순</a></div>
+                </div>
+                <!-- //211116 기획 수정 -->
+                <div class="comment-list">
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                            <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">0</div>
+                        </div>
+                    </div>
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                            <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like is-active">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section--small">
+            <div class="section__inner">
+                <h3 class="title-small">클립영상</h3>
+                <!-- 211110 클립영상 영역 수정 -->
+                <div class="card clip">
+                    <div class="card__list" data-slider="arrow">
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb05.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">무더위, 여름 뇌졸중의 경고</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb06.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">심장마비, 부정맥을 막아라</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb07.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">얼굴, 왜 떨리고 아픈 걸까요?</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb08.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">수두 바이러스의 공격! 대상포진</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb01.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">무더위, 여름 뇌졸중의 경고</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //211110 클립영상 영역 수정 -->
+                <a href="#" class="button button__more">전체보기</a>
+            </div>
+        </div>
+        <div class="section section--small">
+            <div class="section__inner">
+                <div class="title-small">명의정보</div>
+                <div class="doctor-card doctor-card--box">
+                    <div class="doctor-card__item">
+                        <a href="#" class="doctor-card__anchor">
+                            <div class="doctor-card__top">
+                                <div class="doctor-card__image"><img src="../images/img_doctor01.png" alt=""></div>
+                                <div class="doctor-info">
+                                    <div class="doctor-info__department">심장내과</div>
+                                    <div class="doctor-info__name">정보영 교수</div>
+                                </div>
+                            </div>
+                            <div class="doctor-card__bottom">
+                                <div class="doctor-card__title">전문분야</div>
+                                <div class="doctor-card__text">뇌종양, 뇌기저부 수술, 뇌하수체 종양, 안면 경련 및 삼차신경통의 미세혈관감압술</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="doctor-card__item">
+                        <a href="#" class="doctor-card__anchor">
+                            <div class="doctor-card__top">
+                                <div class="doctor-card__image"><img src="../images/img_doctor01.png" alt=""></div>
+                                <div class="doctor-info">
+                                    <div class="doctor-info__department">심장내과</div>
+                                    <div class="doctor-info__name">정보영 교수</div>
+                                </div>
+                            </div>
+                            <div class="doctor-card__bottom">
+                                <div class="doctor-card__title">전문분야</div>
+                                <div class="doctor-card__text">뇌종양, 뇌기저부 수술, 뇌하수체 종양, 안면 경련 및 삼차신경통의 미세혈관감압술</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="doctor-card__item">
+                        <a href="#" class="doctor-card__anchor">
+                            <div class="doctor-card__top">
+                                <div class="doctor-card__image"><img src="../images/img_doctor01.png" alt=""></div>
+                                <div class="doctor-info">
+                                    <div class="doctor-info__department">심장내과</div>
+                                    <div class="doctor-info__name">정보영 교수</div>
+                                </div>
+                            </div>
+                            <div class="doctor-card__bottom">
+                                <div class="doctor-card__title">전문분야</div>
+                                <div class="doctor-card__text">뇌종양, 뇌기저부 수술, 뇌하수체 종양, 안면 경련 및 삼차신경통의 미세혈관감압술</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="button button__more">전체보기</a>
+            </div>
+        </div>
+        <div class="section section--small">
+            <div class="section__inner">
+                <h3 class="title-small">다시보기</h3>
+                <div class="card">
+                    <div class="card__list" data-slider="arrow">
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb05.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">무더위, 여름 뇌졸중의 경고</div>
+                                    <div class="card__info">
+                                        <span class="card__info-item">2021. 10. 08</span>
+                                        <span class="card__info-item">조회 1434</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb06.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">심장마비, 부정맥을 막아라</div>
+                                    <div class="card__info">
+                                        <span class="card__info-item">2021. 10. 01</span>
+                                        <span class="card__info-item">조회 1512</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb07.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">얼굴, 왜 떨리고 아픈 걸까요?</div>
+                                    <div class="card__info">
+                                        <span class="card__info-item">2021. 09. 24</span>
+                                        <span class="card__info-item">조회 3126</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb08.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">수두 바이러스의 공격! 대상포진</div>
+                                    <div class="card__info">
+                                        <span class="card__info-item">2021. 09. 17</span>
+                                        <span class="card__info-item">조회 3217</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_thumb01.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">무더위, 여름 뇌졸중의 경고</div>
+                                    <div class="card__info">
+                                        <span class="card__info-item">2021. 10. 08</span>
+                                        <span class="card__info-item">조회 1434</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button button__more">전체보기</a>
+            </div>
+        </div>
+        <div class="section section--small">
+            <div class="section__inner">
+                <h3 class="title-small">명의칼럼</h3>
+                <ul class="column-list column-list--half">
+                    <li class="column-list__item">
+                        <a href="#" class="column-list__anchor">
+                            <div class="column-list__thumbnail">
+                                <img src="../images/img_column01.jpg" alt="">                                
+                            </div>
+                            <div class="column-list__info">
+                                <div class="column-list__title">뇌졸중 재활치료, 초기에 집중하라</div>
+                                <div class="column-list__text">1980년대부터 여러 연구에서 뇌졸중 이후 뇌에 변화가 나타나는 것이 보고되었습니다. 손상된 뇌 조직 자체가 재생되는 것은 미미하지만, 뇌 안에 변화가 일어나는 뇌 가소성에 의해 기능적 회복은 가능하다는 이야깁니다. 뇌졸중이 발병하면 직접적 손상 부위뿐만 아니라 그 주…</div>
+                                <!-- <div class="column-list__name">심장내과 정보영 교수</div>--><!-- 211201 수정 건 -->
+                            </div>            
+                        </a>
+                    </li>
+                    <li class="column-list__item">
+                        <a href="#" class="column-list__anchor">
+                            <div class="column-list__thumbnail">
+                                <img src="../images/img_column02.jpg" alt="">                                
+                            </div>
+                            <div class="column-list__info">
+                                <div class="column-list__title">50세 하면 떠오르는 질병 ‘오십견’</div>
+                                <div class="column-list__text">보통 50세 전후 연령에서 자주 발병한다고 해서 이름 붙여진 ‘오십견’은 어깨관절과 주위 근육의 움직임이 제한을 받아 발생하는 질병으로 근육통 증상과 어깨를 앞뒤로 올리는 것이 점점 어려워지는 것이 주요 증상입니다. 오십견의 정확한 진단명은 유착성 관절낭염(adhes…</div>
+                                <!-- <div class="column-list__name">심장내과 정보영 교수</div>--><!-- 211201 수정 건 -->
+                            </div>            
+                        </a>
+                    </li>
+                    <li class="column-list__item">
+                        <a href="#" class="column-list__anchor">
+                            <div class="column-list__thumbnail">
+                                <img src="../images/img_column01.jpg" alt="">                                
+                            </div>
+                            <div class="column-list__info">
+                                <div class="column-list__title">뇌졸중 재활치료, 초기에 집중하라</div>
+                                <div class="column-list__text">1980년대부터 여러 연구에서 뇌졸중 이후 뇌에 변화가 나타나는 것이 보고되었습니다. 손상된 뇌 조직 자체가 재생되는 것은 미미하지만, 뇌 안에 변화가 일어나는 뇌 가소성에 의해 기능적 회복은 가능하다는 이야깁니다. 뇌졸중이 발병하면 직접적 손상 부위뿐만 아니라 그 주…</div>
+                                <!-- <div class="column-list__name">심장내과 정보영 교수</div>--><!-- 211201 수정 건 -->
+                            </div>            
+                        </a>
+                    </li>
+                    <li class="column-list__item">
+                        <a href="#" class="column-list__anchor">
+                            <div class="column-list__thumbnail">
+                                <img src="../images/img_column02.jpg" alt="">                                
+                            </div>
+                            <div class="column-list__info">
+                                <div class="column-list__title">50세 하면 떠오르는 질병 ‘오십견’</div>
+                                <div class="column-list__text">보통 50세 전후 연령에서 자주 발병한다고 해서 이름 붙여진 ‘오십견’은 어깨관절과 주위 근육의 움직임이 제한을 받아 발생하는 질병으로 근육통 증상과 어깨를 앞뒤로 올리는 것이 점점 어려워지는 것이 주요 증상입니다. 오십견의 정확한 진단명은 유착성 관절낭염(adhes…</div>
+                                <!-- <div class="column-list__name">심장내과 정보영 교수</div>--><!-- 211201 수정 건 -->
+                            </div>            
+                        </a>
+                    </li>
+                    <li class="column-list__item">
+                        <a href="#" class="column-list__anchor">
+                            <div class="column-list__thumbnail">
+                                <img src="../images/img_column03.jpg" alt="">                                
+                            </div>
+                            <div class="column-list__info">
+                                <div class="column-list__title">‘코로나 블루’로부터 마음 방역하기</div>
+                                <div class="column-list__text">최근 내원하는 환자 대부분이 코로나19 사태 이후 경제적으로 어려워지거나 사람들을 만나기 힘들어지면서 우울감·외로움과 고독을 느낀다고 얘기한다. 심지어 코로나19에 대한 공포 때문에 지나치게 손을 자주 씻거나 가족과 접촉하지 않고 살아가는 분도 있다. 최…</div>
+                                <!-- <div class="column-list__name">심장내과 정보영 교수</div>--><!-- 211201 수정 건 -->
+                            </div>            
+                        </a>
+                    </li>
+                    <li class="column-list__item">
+                        <a href="#" class="column-list__anchor">
+                            <div class="column-list__thumbnail">
+                                <img src="../images/img_column01.jpg" alt="">                                
+                            </div>
+                            <div class="column-list__info">
+                                <div class="column-list__title">뇌졸중 재활치료, 초기에 집중하라</div>
+                                <div class="column-list__text">1980년대부터 여러 연구에서 뇌졸중 이후 뇌에 변화가 나타나는 것이 보고되었습니다. 손상된 뇌 조직 자체가 재생되는 것은 미미하지만, 뇌 안에 변화가 일어나는 뇌 가소성에 의해 기능적 회복은 가능하다는 이야깁니다. 뇌졸중이 발병하면 직접적 손상 부위뿐만 아니라 그 주…</div>
+                                <!-- <div class="column-list__name">심장내과 정보영 교수</div>--><!-- 211201 수정 건 -->
+                            </div>            
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="button button__more">전체보기</a>
+            </div>
+        </div>
+        <div class="section section--small">
+            <div class="section__inner">
+                <div class="title-small">카드뉴스</div>
+                <div class="news">
+                    <div class="news__list" data-slider="arrow">
+                        <div class="news__item">
+                            <a href="#" class="news__anchor">
+                                <img src="../images/img_news01.jpg" alt="정형외과 전문의 김양수 교수 - 어깨 통증에는 무조건 운동이 좋나요?">
+                            </a>
+                        </div>
+                        <div class="news__item">
+                            <a href="#" class="news__anchor">
+                                <img src="../images/img_news02.jpg" alt="피부과 전문의 문재호 교수 - 자외선은 왜 피부암을 유발하나요?">
+                            </a>
+                        </div>
+                        <div class="news__item">
+                            <a href="#" class="news__anchor">
+                                <img src="../images/img_news01.jpg" alt="정형외과 전문의 김양수 교수 - 어깨 통증에는 무조건 운동이 좋나요?">
+                            </a>
+                        </div>
+                        <div class="news__item">
+                            <a href="#" class="news__anchor">
+                                <img src="../images/img_news02.jpg" alt="피부과 전문의 문재호 교수 - 자외선은 왜 피부암을 유발하나요?">
+                            </a>
+                        </div>
+                        <div class="news__item">
+                            <a href="#" class="news__anchor">
+                                <img src="../images/img_news01.jpg" alt="정형외과 전문의 김양수 교수 - 어깨 통증에는 무조건 운동이 좋나요?">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button button__more">전체보기</a>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__inner">
+                <div class="banner">
+                    <a href="#" class="banner__anchor"><img src="../images/img_banner.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+    <div class="footer">
+        <div class="footer__inner">
+            <ul class="footer-link">
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">EBS 소개</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">EBS 공고</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">저작권 침해 제보</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">EBS 클린신고</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">제휴문의</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">광고문의</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">이용약관</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor bold">개인정보처리방침</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">청소년 보호정책</a></li>
+            </ul>
+            <div class="footer-sns">
+                <div class="footer__title">명의 공식 SNS 채널</div>
+                <ul class="footer-sns__list">
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--instagram"><span class="blind">인스타그램</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--facebook"><span class="blind">페이스북</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--twitter"><span class="blind">트위터</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--band"><span class="blind">밴드</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--kakao"><span class="blind">카카오스토리</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-download">
+                <div class="footer__title">EBS 앱 다운로드</div>
+                <ul class="footer-download__list">
+                    <li class="footer-download__item"><a href="#" class="footer-download__anchor footer-download__anchor--play">EBS PLAY 다운로드</a></li>
+                    <li class="footer-download__item"><a href="#" class="footer-download__anchor footer-download__anchor--bandi">EBS Bandi 다운로드</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <ul class="footer-info__list">
+                    <li class="footer-info__item">10393 경기도 고양시 일산동구 한류월드로 281 한국교육방송공사</li>
+                    <li class="footer-info__item">사업자등록번호 : 229-82-01343 (한국교육방송공사사장 김명중)</li>
+                    <li class="footer-info__item">시청자불만전담 : hotline@ebs.co.kr</li>
+                    <!-- 211103 수정 -->
+                    <li class="footer-info__item">부가통신사업신고 : 10077 <span>통신판매업신고 : 고양일산동-1415호 <span>[사업자정보확인]</span></span></li>
+                </ul>
+                <div class="footer__address">Copyright ⓒ EBS. All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+    <!-- e : footer -->
+</div>
+<!-- e : wrap -->
+</body>
+<script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/lib/slick.js"></script>
+<script src="../js/lib/jquery.minicolors.js"></script>
+<script src="../js/lib/pualugin.js"></script>
+<script src="../js/common.js"></script>
+</html>

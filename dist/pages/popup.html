@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 211112 수정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>명의</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel=" shortcut icon" href="../images/favicon.ico">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+<div class="skip-nav">
+    <a href="#gnb" class="skip-nav__item">주메뉴바로가기</a>
+    <a href="#container" class="skip-nav__item">본문바로가기</a>
+</div>
+
+<div id="wrap">
+	<div class="header">
+		<div class="utilbar">
+			<div class="utilWrap">
+				<div class="ebslogo"><a href="https://www.ebs.co.kr"><span class="blind">ebs</span></a></div>
+				<div class="rightMenu">
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="https://www.ebs.co.kr/customer">고객센터</a></li>
+						<li><a href="https://www.ebs.co.kr/package/freeticket?mainTop?#S05">구독하기</a></li>
+						<li class="tlogDrop">
+							<a href="#">다른 사이트 둘러보기<i></i></a>
+							<ul class="tlogSub sub2by">
+								<li><a href="https://5dang.ebs.co.kr">오디오 어학당</a></li>
+								<li><a href="https://5easy.ebs.co.kr">오디오e지식</a></li>
+								<li><a href="https://anikids.ebs.co.kr">애니키즈</a></li>
+								<li><a href="https://classe.ebs.co.kr">CLASSⓔ</a></li>
+								<li><a href="https://docuprime.ebs.co.kr">다큐프라임</a></li>
+								<li><a href="https://worldtrip.ebs.co.kr">세상의 모든 기행</a></li>
+								<li><a href="https://jisike.ebs.co.kr">지식채널ⓔ</a></li>
+								<li><a href="https://ebr.ebs.co.kr">EBS 비즈니스 리뷰</a></li>
+								<li><a href="https://dbox.ebs.co.kr/dbox">D-Box</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header__inner">
+			<div class="header-top">
+				<h1 class="header-logo">
+					<a href="#" class="header-logo__anchor"><span class="blind">명의 헬스케어</span></a>
+				</h1>
+				<!-- 211025 수정 -->
+				<button type="button" class="total-menu mobile"><span class="blind">메뉴열기</span></button>
+				<div class="header-utill">
+					<button type="button" class="header-utill__button header-utill__button--subscribe">구독</button>
+					<!-- 211101 수정 -->
+					<button type="button" class="header-utill__button header-utill__button--bookmark"><span class="blind">MY 프로그램</span></button>
+					<button type="button" class="header-utill__button header-utill__button--share"><span class="blind">공유하기</span></button>
+				</div>	
+			</div>
+			<div class="header-bottom">
+				<ul class="gnb" id="gnb">
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">명의 헬스케어란?</a>
+						<ul class="gnb__2depth">
+							<!-- 211116 기획 수정 -->
+							<li><a href="#">명의 선정기준</a></li>
+							<!-- 211116 기획 수정 -->
+							<li><a href="#">명의 프로그램 소개</a></li>
+							<li><a href="#">서비스 소개</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">방송보기</a>
+						<ul class="gnb__2depth">
+							<li><a href="#">다시보기</a></li>
+							<li><a href="#">미리보기</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">명의 건강정보</a>
+						<ul class="gnb__2depth">
+							<li><a href="#">카드뉴스</a></li>
+							<li><a href="#">칼럼</a></li>
+							<li><a href="#">클립</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item">
+						<a href="#" class="gnb__anchor">명의 검색</a>
+					</li>
+					<li class="gnb__item gnb__item--2depth">
+						<a href="#" class="gnb__anchor">게시판</a>
+						<ul class="gnb__2depth">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">시청자 게시판</a></li>
+							<!-- 211116 기획 수정 -->
+							<li><a href="#">명의에게 묻는다</a></li>
+						</ul>
+					</li>
+					<li class="gnb__item">
+						<a href="#" class="gnb__anchor">MY 명의</a>
+					</li>
+				</ul>
+				<div class="search">
+					<!-- 211025 수정 -->
+					<!-- 211116 기획 수정 -->
+					<button type="button" class="search__anatomy"><span>인체도검색</span></button>
+					<button type="button" class="search__toggle-button"><span class="blind">검색하기</span></button>
+					<div class="search__total">
+						<input type="text" class="search__text" title="검색어 입력" placeholder="검색어를 입력해주세요">
+						<button type="button" class="search__button"><span class="blind">검색</span></button>
+					</div>
+					<!-- //211025 수정 -->
+				</div>
+			</div>
+		</div>
+		<div class="m-header">
+			<div class="m-header__mask"></div>
+			<!-- 로그인 상태시 is-login 클래스 추가 -->
+			<div class="m-header__inner is-login">
+				<div class="m-header__top">
+					<!-- 211103 삭제 -->
+					<!-- <a href="#" class="m-header__logo"><span class="blind">명의</span></a> -->
+					<a href="#" class="m-header__bookmark"><span class="blind">MY 프로그램</span></a>
+					<button type="button" class="m-header__login">로그인</button>
+					<button type="button" class="m-header__logout">로그아웃</button>
+				</div>
+				<!-- 211103 수정 -->
+				<div class="m-scroll-wrap">
+					<div class="m-login">
+						<!-- 211103 수정 -->
+						<div class="m-login__text"><span>홍길동</span>님 환영합니다.</div>
+						<div class="m-login__button-area">
+							<a href="#" class="m-login__button">마이페이지</a>
+							<a href="#" class="m-login__button">구독</a>
+							<a href="#" class="m-login__button">고객센터</a>
+							<a href="#" class="m-login__button">회원정보수정</a>
+						</div>
+					</div>
+					<ul class="m-nav">
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">명의 헬스케어란?</a>
+							<ul class="m-nav__sub">
+								<!-- 211116 기획 수정 -->
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">명의 선정기준</a></li>
+								<!-- 211116 기획 수정 -->
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">명의 프로그램 소개</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">서비스 소개</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">건강정보</a>
+							<ul class="m-nav__sub">
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">카드뉴스</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">칼럼</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">클립</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">방송보기</a>
+							<ul class="m-nav__sub">
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">다시보기</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">미리보기</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">명의검색</a>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">게시판</a>
+							<ul class="m-nav__sub">
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">공지사항</a></li>
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">시청자 게시판</a></li>
+								<!-- 211116 기획 수정 -->
+								<li class="m-nav__sub-item"><a href="#" class="m-nav__sub-anchor">명의에게 묻는다</a></li>
+							</ul>
+						</li>
+						<li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">MY 명의</a>
+						</li>
+						<!-- 211025 삭제 -->
+						<!-- <li class="m-nav__item">
+							<a href="#" class="m-nav__anchor">인체도 질병 검색</a>
+						</li> -->
+						<!-- //211025 삭제 -->
+					</ul>
+					<div class="m-header__bottom">
+						<a href="#" class="m-header__subscribe">구독하기</a>
+						<!-- 211101 수정 -->
+						<a href="#" class="m-header__ebs">EBS메인 바로가기</a>
+						<!-- 211103 수정 -->
+						<div class="m-service">
+							<div class="m-service__title">EBS 서비스 바로가기</div>
+							<ul>
+								<li><a href="https://5dang.ebs.co.kr">오디오 어학당</a></li>
+								<li><a href="https://5easy.ebs.co.kr">오디오e지식</a></li>
+								<li><a href="https://anikids.ebs.co.kr">애니키즈</a></li>
+								<li><a href="https://classe.ebs.co.kr">CLASSⓔ</a></li>
+								<li><a href="https://docuprime.ebs.co.kr">다큐프라임</a></li>
+								<li><a href="https://worldtrip.ebs.co.kr">세상의 모든 기행</a></li>
+								<li><a href="https://jisike.ebs.co.kr">지식채널ⓔ</a></li>
+								<li><a href="https://ebr.ebs.co.kr">EBS 비즈니스 리뷰</a></li>
+								<li><a href="https://dbox.ebs.co.kr/dbox">D-Box</a></li>
+							</ul>
+						</div>
+						<!-- //211103 수정 -->
+					</div>
+				</div>
+				<!-- //211103 수정 -->
+				<button type="button" class="m-header__close"><span class="blind">메뉴 닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!--  e : header -->
+	<div class="total-search">
+		<div class="total-search__inner">
+			<!-- 211108 추가 -->
+			<div class="total-search__section mobile">
+				<div class="total-search__keyword">
+					<input type="text" class="total-search__text" title="검색어 입력" placeholder="검색어를 입력해주세요">
+					<button type="button" class="total-search__button"><span class="blind">검색</span></button>
+				</div>
+			</div>
+			<!-- //211108 추가 -->
+			<div class="total-search__section">
+				<div class="total-search__title">추천 검색어</div>
+				<div class="key-word">
+					<a href="#" class="key-word__item">부정맥</a>
+					<a href="#" class="key-word__item">심근증</a>
+					<a href="#" class="key-word__item">심부전증</a>
+					<a href="#" class="key-word__item">판막질환</a>
+				</div>
+			</div>
+			<div class="total-search__section">
+				<div class="total-search__title">최근 검색어</div>
+				<div class="key-word key-word--gray">
+					<a href="#" class="key-word__item">심부전증</a>
+					<a href="#" class="key-word__item">하지정맥</a>
+					<a href="#" class="key-word__item">빈혈</a>
+					<a href="#" class="key-word__item">치질</a>
+					<a href="#" class="key-word__delete"><span class="blind">검색어 삭제</span></a>
+				</div>
+			</div>
+			<div class="total-search__section">
+				<!-- 211116 기획 수정 -->
+				<div class="total-search__title">최신 방송 명의</div>
+				<div class="best-doctor">
+					<!-- 211108 추가 -->
+					<div class="best-doctor__inner">
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search01.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">혈액종양내과</div>
+							<div class="best-doctor__name">김수정</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search02.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">정형외과</div>
+							<div class="best-doctor__name">최윤락</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search03.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">심장내과</div>
+							<div class="best-doctor__name">정보영</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search04.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">피부과</div>
+							<div class="best-doctor__name">문재호</div>
+						</a>
+						<a href="#" class="best-doctor__item">
+							<div class="best-doctor__image">
+								<img src="../images/common/img_total_search05.png" alt=""><!-- 211101 확장자 변경 jpg -> png -->
+							</div>
+							<div class="best-doctor__department">정형외과</div>
+							<div class="best-doctor__name">김양수</div>
+						</a>
+					</div>
+					<!-- //211108 추가 -->
+				</div>
+			</div>
+			<button class="total-search__close"><span class="blind">통합 검색 닫기</span></button>
+		</div>
+		<div class="total-search__dim"></div>
+	</div>
+	<!-- 211027 인체도검색 추가 -->
+	<div class="anatomy-search">
+		<div class="anatomy-search__inner">
+			<div class="anatomy-search__images">
+				<img class="anatomy-search__image" src="../images/common/bg_anatomy.png" alt="">
+			</div>
+			<div class="anatomy-search__contents">
+				<div class="anatomy-search__title">신체부위 선택</div>
+				<div class="anatomy-search__list">
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">전신</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">머리</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">정신</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">얼굴</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">목</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">가슴/등</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">복부</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">생식기/비뇨기</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">팔/손</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">다리/발</button></div>
+					<!-- 211117 기획 수정 -->
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">허리/엉덩이</button></div>
+					<div class="anatomy-search__item"><button type="button" class="anatomy-search__anchor">근육/피부</button></div>
+				</div>
+				<div class="anatomy-search__title">질병 선택</div>
+				<ul class="search-kategorie__list search-kategorie__list--half scroll">
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">간암</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">폐암</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">간질</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">심장판막</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">위암</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">간염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">위염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">식도염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">역류성 식도염</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">위경련</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">폐혈증</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">심혈관비데증</a></li>
+					<li class="search-kategorie__item"><a href="#" class="search-kategorie__anchor">심부전증</a></li>
+				</ul>
+			</div>
+			<button class="anatomy-search__close"><span class="blind">인체도 검색 닫기</span></button>
+		</div>
+		<div class="anatomy-search__dim"></div>
+	</div>
+	<!-- //211027 인체도검색 추가 -->
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <button data-element="modal__open" data-target="#popShare">공유하기</button>
+                <div id="popShare" class="pualugin-modal__element popup popup--small" data-element="modal__element">
+                    <div class="pualugin-modal__container" data-element="modal__element-container">
+                        <div class="pualugin-modal__header">공유하기</div>
+                        <div class="pualugin-modal__contents" data-element="modal__element-contetns">
+                            <div class="share-list">
+                                <div class="share-list__item">
+                                    <!-- 211111 sns공유하기 수정 -->
+                                    <a href="#" class="share-list__anchor share-list__anchor--kakako">카카오스토리</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--facebook">페이스북</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--band">밴드</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--blog">블로그</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--twitter">트위터</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--copy">URL복사</a>
+                                </div>
+                            </div>
+                            <button class="pualugin-modal__close" data-element="modal__close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button data-element="modal__open" data-target="#popReport">신고하기</button>
+                <div id="popReport" class="pualugin-modal__element popup popup--big" data-element="modal__element">
+                    <div class="pualugin-modal__container" data-element="modal__element-container">
+                        <div class="pualugin-modal__header">신고하기</div>
+                        <div class="pualugin-modal__contents" data-element="modal__element-contetns">
+                            <div class="report">
+                                <div class="report__top">
+                                    <div class="report__top-title">신고 전에 잠깐!</div>
+                                    <div class="report__top-text">1. 불건전한 게시글에 대해서만 신고해주세요.</div>
+                                    <div class="report__top-text">2. 신고가 5회 이상 누적되는 경우, 해당 게시글은 블라인드. 처리되어 조회되지 않습니다.</div>
+                                    <div class="report__top-text">3. 허위 신고자는 불량회원으로 등록되어 일정기간 게시글 및 댓글 작성이 안됩니다.</div>
+                                </div>
+                                <div class="report__title">신고 사유를 선택해주세요</div>
+                                <div class="report__text">여러 사유에 해당되는 경우에는 대표적인 경우 하나를 선택해주세요.</div>
+                                <div class="report__radio-wrap">
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report01" class="report__input">
+                                        <label class="report__label" for="report01">타인에 대한 욕설 또는 비방</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report02" class="report__input">
+                                        <label class="report__label" for="report02">불법 정보 유출</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report03" class="report__input">
+                                        <label class="report__label" for="report03">인신공격 및 명예 훼손</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report04" class="report__input">
+                                        <label class="report__label" for="report04">같은 내용의 반복 (도배)</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report05" class="report__input">
+                                        <label class="report__label" for="report05">음란성 내용 및 음란물 링크</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report06" class="report__input">
+                                        <label class="report__label" for="report06">폭력 또는 사행심 조장</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report07" class="report__input">
+                                        <label class="report__label" for="report07">상업적 광고, 사이트/홈피 홍보</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report08" class="report__input">
+                                        <label class="report__label" for="report08">게시판 성격에 맞지 않는 내용</label>
+                                    </div>
+                                </div>
+                                <div class="button-wrap">
+                                    <button type="button" class="button button__round" data-element="modal__close">취소</button>
+                                    <button type="button" class="button button__round button__round--blue">신고하기</button>
+                                </div>
+                            </div>
+                            <button class="pualugin-modal__close" data-element="modal__close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+    <div class="footer">
+        <div class="footer__inner">
+            <ul class="footer-link">
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">EBS 소개</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">EBS 공고</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">저작권 침해 제보</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">EBS 클린신고</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">제휴문의</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">광고문의</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">이용약관</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor bold">개인정보처리방침</a></li>
+                <li class="footer-link__item"><a href="#" class="footer-link__anchor">청소년 보호정책</a></li>
+            </ul>
+            <div class="footer-sns">
+                <div class="footer__title">명의 공식 SNS 채널</div>
+                <ul class="footer-sns__list">
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--instagram"><span class="blind">인스타그램</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--facebook"><span class="blind">페이스북</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--twitter"><span class="blind">트위터</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--band"><span class="blind">밴드</span></a></li>
+                    <li class="footer-sns__item"><a href="#" class="footer-sns__anchor footer-sns__anchor--kakao"><span class="blind">카카오스토리</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-download">
+                <div class="footer__title">EBS 앱 다운로드</div>
+                <ul class="footer-download__list">
+                    <li class="footer-download__item"><a href="#" class="footer-download__anchor footer-download__anchor--play">EBS PLAY 다운로드</a></li>
+                    <li class="footer-download__item"><a href="#" class="footer-download__anchor footer-download__anchor--bandi">EBS Bandi 다운로드</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <ul class="footer-info__list">
+                    <li class="footer-info__item">10393 경기도 고양시 일산동구 한류월드로 281 한국교육방송공사</li>
+                    <li class="footer-info__item">사업자등록번호 : 229-82-01343 (한국교육방송공사사장 김명중)</li>
+                    <li class="footer-info__item">시청자불만전담 : hotline@ebs.co.kr</li>
+                    <!-- 211103 수정 -->
+                    <li class="footer-info__item">부가통신사업신고 : 10077 <span>통신판매업신고 : 고양일산동-1415호 <span>[사업자정보확인]</span></span></li>
+                </ul>
+                <div class="footer__address">Copyright ⓒ EBS. All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+    <!-- e : footer -->
+</div>
+<!-- e : wrap -->
+</body>
+<script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/lib/slick.js"></script>
+<script src="../js/lib/jquery.minicolors.js"></script>
+<script src="../js/lib/pualugin.js"></script>
+<script src="../js/common.js"></script>
+</html>
