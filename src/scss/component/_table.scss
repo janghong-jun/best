@@ -1,0 +1,116 @@
+.table{
+    width:100%;
+    border-top:2px solid #333;
+    &__th,
+    &__td{
+        padding:25px 40px ;
+        font-size:16px;
+        line-height:28px;
+        text-align:left;
+        vertical-align:middle;
+        border-bottom:1px solid #e6e6e6;
+    }
+    &__th{
+        font-weight:700;
+        color:#333;
+        letter-spacing:-0.64px;
+    }
+    &__td{
+        padding:21px 40px 22px;
+        letter-spacing:-0.8px;
+        color:#333;
+    }
+    &__number{
+        color:#888;
+    }
+    &__date{
+        color:#acacac;
+    }
+    &__name{
+        color:#707070;
+    }
+    &__count{
+        color:#acacac;
+    }
+    &__anchor{
+        display:inline-block !important;
+        max-width:calc(100% - 30px);
+        font-weight:500;
+        vertical-align:top;
+        @include line-clamp(28,28,1);
+        white-space:nowrap;
+    }
+    &__important{
+        .table__number{
+            font-weight:700;
+            color:#348de6;
+        }
+        .table__anchor{
+            font-weight:700;
+        }
+    }
+    &.notice{
+        col:nth-child(3){
+            width:150px !important;
+        }
+    }
+    & ~ .pagination{
+        margin-top:24px;
+    }
+}
+@media screen and (max-width:1024px){
+    .table{
+        col{
+            &:nth-child(1){
+                width:100px !important;
+            }
+            &:nth-child(3){
+                width:110px !important;
+            }
+            &:nth-child(4){
+                width:130px !important;
+            }
+            &:nth-child(5){
+                width:100px !important;
+            }
+        }
+        &__th,&__td{
+            padding-left:20px;
+            padding-right:20px;
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .table{
+        col,
+        &__th,
+        &__td{
+            display:none;
+        }
+        col.table-mobile{
+            display:table-column;
+            &:nth-child(4){
+                width:76px !important;
+            }
+        }
+        &__th.table-mobile,
+        &__td.table-mobile{
+            display:table-cell;
+            padding:20px 10px;
+            font-size:14px;
+        }
+        &__anchor{
+            max-width:calc(100% - 25px);
+            font-size:14px;
+            letter-spacing:-0.7px;
+        }
+        &__date{
+            font-size:12px;
+            line-height:18px;
+            letter-spacing:-0.36px;
+        }
+        & ~ .pagination{
+            margin-top:40px;
+        }
+    }
+}

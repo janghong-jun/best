@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('../include/meta.html')
+    <title>홈트레이닝 목록 | 명의</title>
+@@include('../include/css.html')
+</head>
+<body>
+@@include('../include/skip.html')
+
+<div id="wrap">
+@@include('../include/header.html')
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <div class="title-main">
+                    홈트레이닝<span></span>
+                    <div class="search-contents">
+                        <input type="text" class="search-contents__item" title="검색어 입력" placeholder="영상 제목을 검색해주세요">
+                        <button type="button" class="search-contents__anchor"><span class="blind">홈트레이닝 검색</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__inner">
+                <div class="card">
+                    <div class="card__list">
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip01.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">왜 환자는 의사를 만나기가 어려울까</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip02.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">뇌졸중 재활치료, 초기에 집중하라</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip03.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">50세 하면 떠오르는 질병  ‘오십견’</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip04.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">‘코로나 블루’로부터 마음 방역하기</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip01.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">왜 환자는 의사를 만나기가 어려울까</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip02.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">뇌졸중 재활치료, 초기에 집중하라</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip03.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">50세 하면 떠오르는 질병  ‘오십견’</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card__item">
+                            <a href="#" class="card__anchor">
+                                <div class="card__thumbnail card__thumbnail--video">
+                                    <img src="../images/img_clip04.jpg" alt="">
+                                </div>
+                                <div class="card__contents">
+                                    <div class="card__title">‘코로나 블루’로부터 마음 방역하기</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--first disabled" type="button"><span class="hide">첫페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--prev disabled" type="button"><span class="hide">이전페이지</span></button>
+                    <div class="pagination__number-area">
+                        <!-- 현재 페이지 is-active 클래스 추가 및 strong 태그 -->
+                        <strong class="pagination__number is-active">01</strong>
+                        <a href="#" class="pagination__number">02</a>
+                        <a href="#" class="pagination__number">03</a>
+                        <a href="#" class="pagination__number">04</a>
+                        <a href="#" class="pagination__number">05</a>
+                    </div>
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--next" type="button"><span class="hide">다음페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--last" type="button"><span class="hide">마지막 페이지</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__inner">
+                <div class="banner">
+                    <a href="#" class="banner__anchor"><img src="../images/img_banner.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+@@include('../include/footer.html')
+</div>
+<!-- e : wrap -->
+</body>
+@@include('../include/script.html')
+</html>

@@ -1,0 +1,548 @@
+[{
+        "header": [{
+                "label": "1 Depth",
+                "width": 10,
+                "type": "text"
+            },
+            {
+                "label": "2 Depth",
+                "width": 10,
+                "type": "text"
+            },
+            {
+                "label": "3 Depth",
+                "width": 10,
+                "type": "text"
+            },
+            {
+                "label": "4 Depth",
+                "width": 10,
+                "type": "text"
+            },
+            {
+                "label": "ID",
+                "width": 10,
+                "type": "text"
+            },
+            {
+                "label": "URL",
+                "width": 15,
+                "type": "link"
+            },
+            {
+                "label": "Divison",
+                "width": 5,
+                "type": "text"
+            },
+            {
+                "label": "Date",
+                "width": 5,
+                "type": "text"
+            },
+            {
+                "label": "Status",
+                "width": 5,
+                "type": "status"
+            },
+            {
+                "label": "Memo",
+                "type": "memo"
+            }
+        ],
+        "list": [{
+            "id": 1,
+            "cell1": "레이아웃",
+            "cell2": "",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "",
+            "cell6": "layout.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": "상태 표시<br><br>1:대기<br>2:완료<br>3:진행중"
+        },{
+            "id": 1,
+            "cell1": "popup",
+            "cell2": "",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "",
+            "cell6": "popup.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "댓글 케이스",
+            "cell2": "",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "",
+            "cell6": "comment.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "메인",
+            "cell2": "",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "MAIN",
+            "cell6": "MAIN.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "통합검색",
+            "cell2": "",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "INFOR",
+            "cell6": "INFOR.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },
+        {
+            "id": 1,
+            "cell1": "인체 구조도 검색",
+            "cell2": "결과",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_BODY_RESULT",
+            "cell6": "BD_BODY_RESULT.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 헬스케어란?",
+            "cell2": "명의 선정기준",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_ETC-01",
+            "cell6": "BD_ETC-01.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 헬스케어란?",
+            "cell2": "명의 프로그램 소개",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_ETC-02",
+            "cell6": "BD_ETC-02.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 헬스케어란?",
+            "cell2": "서비스 소개",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_ETC-03",
+            "cell6": "BD_ETC-03.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "방송보기",
+            "cell2": "미리보기 ",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_PLAY",
+            "cell6": "BD_PLAY.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "방송보기",
+            "cell2": "미리보기 ",
+            "cell3": "상세",
+            "cell4": "",
+            "cell5": "BD_PLAY_DETAILS",
+            "cell6": "BD_PLAY_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "방송보기",
+            "cell2": "다시보기 ",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_REPLAY",
+            "cell6": "BD_REPLAY.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "방송보기",
+            "cell2": "다시보기 ",
+            "cell3": "상세",
+            "cell4": "",
+            "cell5": "BD_REPLAY_DETAILS",
+            "cell6": "BD_REPLAY_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "카드뉴스",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_CARD",
+            "cell6": "BD_CARD.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "카드뉴스",
+            "cell3": "상세",
+            "cell4": "",
+            "cell5": "BD_CARD_DETAILS",
+            "cell6": "BD_CARD_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "칼럼",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_COLUMN",
+            "cell6": "BD_COLUMN.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "칼럼",
+            "cell3": "상세",
+            "cell4": "",
+            "cell5": "BD_COLUMN",
+            "cell6": "BD_COLUMN_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_CLIP",
+            "cell6": "BD_CLIP.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "명의인터뷰 목록",
+            "cell4": "",
+            "cell5": "BD_CLIP_INTER",
+            "cell6": "BD_CLIP_INTER.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "명의인터뷰 상세",
+            "cell4": "",
+            "cell5": "BD_CLIP_INTER_DETAILS",
+            "cell6": "BD_CLIP_INTER_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "CG로 보는 의학정보 목록",
+            "cell4": "",
+            "cell5": "BD_CLIP_CG",
+            "cell6": "BD_CLIP_CG.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "CG로 보는 의학정보 상세",
+            "cell4": "",
+            "cell5": "BD_CLIP_CG_DETAILS",
+            "cell6": "BD_CLIP_CG_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "운동법 목록",
+            "cell4": "",
+            "cell5": "BD_CLIP_FOOD",
+            "cell6": "BD_CLIP_FOOD.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "운동법 상세",
+            "cell4": "",
+            "cell5": "BD_CLIP_FOOD_DETAILS",
+            "cell6": "BD_CLIP_FOOD_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "식습관 목록",
+            "cell4": "",
+            "cell5": "BD_CLIP_CU",
+            "cell6": "BD_CLIP_CU.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "식습관 상세",
+            "cell4": "",
+            "cell5": "BD_CLIP_CU_DETAILS",
+            "cell6": "BD_CLIP_CU_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "스페셜영상 목록",
+            "cell4": "",
+            "cell5": "BD_CLIP_SP",
+            "cell6": "BD_CLIP_SP.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 건강정보",
+            "cell2": "클립영상",
+            "cell3": "스페셜영상 상세",
+            "cell4": "",
+            "cell5": "BD_CLIP_SP_DETAILS",
+            "cell6": "BD_CLIP_SP_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 검색",
+            "cell2": "검색",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_DOCTOR",
+            "cell6": "BD_DOCTOR.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 검색",
+            "cell2": "결과",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_DOCTOR_RESULT",
+            "cell6": "BD_DOCTOR_RESULT.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "명의 검색",
+            "cell2": "상세",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_DOCTOR_RESULT_DETAILS",
+            "cell6": "BD_DOCTOR_RESULT_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "공지사항",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_BOARD-01",
+            "cell6": "BD_BOARD-01.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "공지사항",
+            "cell3": "상세",
+            "cell4": "",
+            "cell5": "BD_BOARD-01_DETAILS",
+            "cell6": "BD_BOARD-01_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "공지사항",
+            "cell3": "등록",
+            "cell4": "",
+            "cell5": "BD_BOARD-01_WRITING",
+            "cell6": "BD_BOARD-01_WRITING.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "시청자게시판",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_BOARD-02",
+            "cell6": "BD_BOARD-02.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "시청자게시판",
+            "cell3": "상세",
+            "cell4": "",
+            "cell5": "BD_BOARD-02_DETAILS",
+            "cell6": "BD_BOARD-02_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "시청자게시판",
+            "cell3": "등록",
+            "cell4": "",
+            "cell5": "BD_BOARD-02_WRITING",
+            "cell6": "BD_BOARD-02_WRITING.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "질문게시판",
+            "cell3": "목록",
+            "cell4": "",
+            "cell5": "BD_BOARD-03",
+            "cell6": "BD_BOARD-03.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "질문게시판",
+            "cell3": "상세",
+            "cell4": "",
+            "cell5": "BD_BOARD-03_DETAILS",
+            "cell6": "BD_BOARD-03_DETAILS.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "게시판",
+            "cell2": "질문게시판",
+            "cell3": "등록",
+            "cell4": "",
+            "cell5": "BD_BOARD-03_WRITING",
+            "cell6": "BD_BOARD-03_WRITING.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        },{
+            "id": 1,
+            "cell1": "MY 명의",
+            "cell2": "",
+            "cell3": "",
+            "cell4": "",
+            "cell5": "BD_MY",
+            "cell6": "BD_MY.html",
+            "cell7": "",
+            "cell8": "",
+            "cell9": 2,
+            "cell10": ""
+        }
+        ]
+    }
+]

@@ -1,0 +1,17 @@
+@mixin line-clamp($lineHeight, $height, $line){
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-height:$height + px;
+  line-height:$lineHeight + px;
+  word-wrap:break-word;
+  -webkit-line-clamp:$line; 
+  -webkit-box-orient:vertical;
+  display:-webkit-box;
+}
+@mixin clearfix{
+  &:after{
+    display:block;
+    clear:both;
+    content:'';
+  }
+}

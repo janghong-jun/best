@@ -1,0 +1,1038 @@
+@import "./common/mixin";
+
+.card__thumbnail,.half-list__thumbnail{
+    max-width:294px;
+}
+// 슬라이더 리스트
+.card{
+    position:relative;
+    &__list{
+        overflow:hidden;
+    }
+    &__item{
+        float:left;
+        position:relative;
+        width:calc(25% - 6px);
+        margin-top:40px;
+        margin-left:8px;
+        &:nth-child(4n-3){
+            margin-left:0;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4){
+            margin-top:0;
+        }
+    }
+    &__anchor{
+        display:block;
+        &--label{
+            margin-top:36px;
+            cursor:pointer;
+        }
+    }
+    &__tag{
+        position:absolute;
+        top:0;
+        right:0;
+        z-index:1;
+        min-width:64px;
+        height:40px;
+        padding:0 15px;
+        font-size:18px;
+        font-weight:700;
+        text-align:center;
+        line-height:40px;
+        color:#fff;
+        background-color:#75befd;
+    }
+    &__thumbnail{
+        display:block;
+        position:relative;
+        &--video{
+            &:after{
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                background:rgba($color:#000, $alpha:0.2) url(../images/common/icon_video.png) 50% 50% no-repeat;
+                background-size:64px 64px;
+                content:'';
+            }
+        }
+    }
+    &__title{
+        display:block !important;
+        max-width:100%;
+        margin-top:8px;
+        font-size:18px;
+        font-weight:500;
+        letter-spacing:-0.9px;
+        color:#333;
+        @include line-clamp(28,28,1);
+        white-space:nowrap;
+    }
+    &__name{
+        display:block !important;
+        max-width:100%;
+        margin-top:8px;
+        font-size:16px;
+        letter-spacing:-0.8px;
+        color:#348de6;
+        @include line-clamp(28,28,1);
+        white-space:nowrap;
+        &~.card__info{
+            margin-top:8px;
+        }
+    }
+    &__info{
+        display:block;
+        margin-top:4px;
+        font-size:0;
+        &-item{
+            display:block;
+            position:relative;
+            display:inline-block;
+            margin-left:8px;
+            padding-left:9px;
+            font-size:14px;
+            line-height:24px;
+            letter-spacing:-0.7px;
+            color:#acacac;
+            &:after{
+                position:absolute;
+                top:50%;
+                left:0;
+                width:1px;
+                height:16px;
+                margin-top:-8px;
+                background-color:#f2f2f2;
+                content:'';
+            }
+            &:first-child{
+                margin-left:0;
+                padding-left:0;
+                &:after{
+                    display:none;
+                }
+            }
+        }
+    }
+    .slick-slider{
+        .slick-list{
+            margin-left:-8px;
+        }
+        .slick-slide{
+            margin-left:8px;
+        }
+        .slick-arrow{
+            top:50%;
+            margin-top:-56px;
+        }
+    }
+    &.clip{
+        .slick-arrow{
+            top:50%;
+            margin-top:-42px;
+        }
+    }
+    & ~ .pagination{
+        margin-top:64px
+    }
+    &.modify{
+        .slick-slider .slick-arrow{
+            margin-top:-38px;
+        }
+        &.clip{
+            .slick-slider .slick-arrow{
+                margin-top:-24px;
+            }
+        }
+    }
+}
+// 명의 리스트
+.doctor-card{
+    @include clearfix;
+    &__item{
+        overflow:hidden;
+        float:left;
+        width:calc(33.33% - 16px);
+        margin-top:40px;
+        margin-left:24px;
+        background-color:#fff;
+        border-radius:12px;
+        &:nth-child(3n){
+            width:calc(33.34% - 16px);
+        }
+        &:nth-child(3n - 2){
+            margin-left:0;
+        }
+        &:nth-child(1),&:nth-child(2),&:nth-child(3){
+            margin-top:0;
+        }
+    }
+    &__anchor{
+        display:block;
+        &--label{
+            margin-top:12px;
+            cursor:pointer;
+        }
+    }
+    &__top{
+        display:block;
+        position:relative;
+        height:240px;
+        background-position:100% 100%;
+        background-repeat:no-repeat;
+        background-color:#e9f0f7;
+        .doctor-info{
+            display:block;
+            position:absolute;
+            left:24px;
+            bottom:23px;
+            &__department{
+                display:block;
+                margin-bottom:4px;
+                font-size:18px;
+                color:#4fa1ea;
+            }
+            &__name{
+                display:block;
+               font-size:24px;
+               font-weight:700;
+               color:#333; 
+            }
+        }
+    }
+    &__bottom{
+        display:block;
+        position:relative;
+        min-height:144px;
+        padding:24px;
+        &:after{
+            position:absolute;
+            top:24px;
+            right:24px;
+            width:36px;
+            height:36px;
+            background:url(../images/common/icon_more.png) 50% 50% no-repeat;
+            background-size:36px 36px;
+            content:'';
+        }
+    }
+    &__title{
+        display:block;
+        padding-right:60px;
+        font-size:16px;
+        font-weight:500;
+        color:#333;
+        & ~ .doctor-card__title{
+            margin-top:24px;
+        }
+    }
+    &__text{
+        display:block;
+        min-height:24px;
+        margin-top:8px;
+        padding-right:60px;
+        font-size:16px;
+        color:#707070;
+        @include line-clamp(24,48,2);
+        word-break:keep-all;
+    }
+    &__video{
+        display:block;
+        margin-top:8px;
+        @include clearfix;
+        &-title{
+            float:left;
+            max-width:calc(100% - 100px);
+            font-size:16px;
+            font-weight:500;
+            text-decoration:underline;
+            color:#333;
+            @include line-clamp(19,19,1);
+            white-space:nowrap;
+        }
+        &-date{
+            display:block;
+            float:right;
+            font-size:16px;
+            color:#707070;
+        }
+    }
+    .button__more-icon{
+        position:absolute;
+        right:24px;
+        top:24px;
+    }
+    & ~ .pagination{
+        margin-top:41px;
+    }
+    & ~ .button-wrap{
+        margin-top:41px;
+    }
+    &--box{
+        .doctor-card__item{
+            overflow:visible;
+            position:relative;
+            padding-top:24px;
+        }
+        .doctor-card__anchor{
+            padding:24px;
+            border-radius:8px;
+            background-color:#f2f2f2;
+        }
+        .doctor-card__top{
+            position:static;
+            height:104px;
+            background-color:transparent;
+            .doctor-info{
+                position:static;
+                padding-right:140px;
+                &__department{
+                    line-height:28px;
+                    color:#348de6;
+                }
+                &__name{
+                    padding-right:24px;
+                    font-weight:500;
+                    line-height:36px;
+                    letter-spacing:-1.2px;
+                }
+            }
+        }
+        .doctor-card__bottom{
+            position:relative;
+            min-height:52px;
+            padding:0;
+            &:after{
+                display:none;
+            }
+        }
+        .doctor-card__title{
+            position:absolute;
+            top:5px;
+            left:0;
+            padding-right:0;
+        }
+        .doctor-card__text{
+            min-height:52px;
+            margin-top:0;
+            padding:0 0 0 72px;
+            @include line-clamp(28,52,2);
+            word-break:break-all;
+        }
+        .doctor-card__image{
+            overflow:hidden;
+            position:absolute;
+            top:0;
+            right:24px;
+            width:140px;
+            height:140px;
+            border-radius:50%;
+            background-color:#fff;
+        }
+        .slick-slide{
+            margin-left:24px;
+        }
+        .slick-list{
+            margin-left:-24px;
+        }
+        &.slick-slider .slick-arrow{
+            top:50%;
+            margin-top:-24px;
+        }
+        &.modify.slick-slider .slick-arrow{
+            margin-top:-20px;
+        }
+    }
+    &--info{
+        .doctor-card__bottom{
+            position:relative;
+            & ~ .doctor-card__bottom{
+                margin-top:16px;
+            }
+        }
+        .doctor-card__title{
+            position:static;
+        }
+        .doctor-card__text{
+            margin-top:4px;
+            padding-left:0;
+            &--black{
+                display:block !important;
+                min-height:26px;
+                padding-right:100px;
+                color:#333;
+                @include line-clamp(28,28,1);
+                white-space:nowrap;
+            }
+        }
+        .doctor-card__date{
+            position:absolute;
+            right:0;
+            bottom:0;
+            font-size:16px;
+            line-height:28px;
+            color:#acacac;
+        }
+    }
+}
+// 칼럼 리스트
+.column-list{
+    &__item{
+        margin-top:8px;
+        border-bottom:1px solid #f2f2f2;
+        &:first-child{
+            margin-bottom:0;
+        }
+    }
+    &__anchor{
+        display:table;
+        width:100%;
+        &--label{
+            position:relative;
+            margin-top:36px;
+            cursor:pointer;
+        }
+    }
+    &__thumbnail{
+        display:block;
+        max-width:294px;
+    }
+    &__info{
+        display:table-cell;
+        padding-left:40px;
+        vertical-align:middle ;
+    }
+    &__title{
+        display:block;
+        font-size:24px;
+        font-weight:700;
+    }
+    &__text{
+        display:block;
+        margin-top:8px;
+        font-size:18px;
+        color:#acacac;
+        @include line-clamp(28,56,2);
+    }
+    &__name{
+        display:block;
+        margin-top:25px;
+        font-size:18px;
+        color:#75befd;
+    }
+    &--half{
+        @include clearfix;
+        &.slick-slider{
+            .slick-list{
+                margin-left:-8px;
+            }
+            .slick-slide{
+                margin-left:8px;
+            }
+            .slick-arrow{
+                top:50%;
+                margin-top:-56px;
+            }
+        }
+        .column-list__anchor{
+            display:block;
+        }
+        .column-list__item{
+            float:left;
+            margin-top:0;
+            width:50%;
+            border-bottom:0;
+            &:nth-child(1),
+            &:nth-child(2){
+                margin-top:0;
+            }
+        }
+        .column-list__info{
+            display:block;
+            padding:0;
+        }
+        .column-list__title{
+            margin-top:16px;
+            font-size:18px;
+            font-weight:500;
+            letter-spacing:-0.8px;
+            @include line-clamp(32,32,1);
+        }
+        .column-list__text{
+            min-height:48;
+            margin-top:12px;
+            font-size:14px;
+            letter-spacing:-0.7px;
+            color:#888;
+            @include line-clamp(24,48,2);
+        }
+        .column-list__name{
+            margin-top:24px;
+            font-size:16px;
+            color:#348de6;
+        }
+        .slick-slide{
+            & > div{
+                margin-top:24px;
+                @include clearfix;
+                &:first-child{
+                    margin-top:0;
+                }
+            }
+        }
+        &.slick-slider .slick-arrow{
+            top:50%;
+            margin-top:-78px;
+        }
+    }
+    &.modify{
+        .input-checkbox{
+            top:-36px;
+        }
+    }
+}
+// 뉴스 슬라이드
+.news{
+    &__item{
+        position:relative;
+    }
+    &__anchor{
+        display:block;
+        &--label{
+            margin-top:36px;
+            cursor:pointer;
+        }
+    }
+    .slick-list{
+        margin-left:-8px;
+    }
+    .slick-slide{
+        margin-left:8px;
+    }
+    .slick-slider .slick-arrow{
+        top:50%;
+        margin-top:-24px;
+    }
+    &.modify{
+        .slick-slider .slick-arrow{
+            margin-top:-6px;
+        }
+    }
+}
+// 하프리스트
+.half-list{
+    &__wrap{
+        @include clearfix;
+    }
+    &__item{
+        float:left;
+        width:50%;
+        margin-top:24px;
+        &:nth-child(1),&:nth-child(2){
+            margin-top:0;
+        }
+    }
+    &__anchor,.colume__anchor{
+        display:block;
+        @include clearfix;
+    }
+    &__thumbnail{
+        float:left;
+        position:relative;
+        &--video{
+            &:after{
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                background:rgba($color:#000, $alpha:0.2) url(../images/common/icon_video.png) 50% 50% no-repeat;
+                background-size:64px 64px;
+                content:'';
+            }
+            &~.half-list__contents{
+                width:calc(100% - 294px);
+                .half-list__name{
+                    @include line-clamp(32,32,1);
+                }
+            }
+        }
+    }
+    &__contents{
+        float:left;
+        width:calc(100% - 294px);
+        padding:0 24px 0 16px;
+        word-break:keep-all;
+    }
+    &__title{
+        font-size:24px;
+        font-weight:500;
+        letter-spacing:-1.2px;
+        color:#333;
+        @include line-clamp(36,71,2);
+    }
+    &__name{
+        margin-top:24px;
+        font-size:18px;
+        letter-spacing:-0.9px;
+        color:#348de6;
+        @include line-clamp(32,32,1);
+    }
+    &__date{
+        margin-top:8px;
+        font-size:14px;
+        line-height:24px;
+        letter-spacing:-0.7px;
+        color:#acacac;
+    }
+    & ~ .pagination{
+        margin-top:64px;
+    }
+}
+// 미리보기 목록
+.preview{
+    margin-bottom:68px;
+    padding-bottom:40px;
+    border-bottom:1px solid #e6e6e6;
+    &__anchor{
+        display:block;
+        margin-bottom:24px;
+    }
+    &__thumbnail{
+        position:relative;
+    }
+    &__title{
+        margin-bottom:40px;
+        font-size:36px;
+        font-weight:700;
+        letter-spacing:-1.08px;
+        color:#333;
+    }
+    &__content{
+        font-size:18px;
+        line-height:28px;
+        color:#707070;
+    }
+    &__name{
+        font-size:18px;
+        color:#348de6;
+    }
+    &.detail-page{
+        margin-bottom:68px;
+    }
+    .detail-page__video{
+        margin-bottom:0;
+    }
+}
+.preview-list{
+    margin-top:44px;
+    @include clearfix;
+    &__item{
+        float:left;
+        width:calc(33.33% - 43px);
+        margin:48px 0 0 64px;
+        padding-top:24px;
+        border-top:1px solid #f2f2f2;
+        &:nth-child(3n-2){
+            margin-left:0;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3){
+            margin-top:0;
+        }
+    }
+    &__anchor{
+        display:block;
+    }
+    &__title{
+        min-height:72px;
+        font-size:24px;
+        font-weight:500;
+        word-break:keep-all;
+        letter-spacing:-1.2px;
+        color:#333;
+        @include line-clamp(36,72,2);
+    }
+    &__name{
+        margin-top:24px;
+        font-size:18px;
+        letter-spacing:-0.9px;
+        color:#348de6;
+        @include line-clamp(32,32,1);
+    }
+    &__info{
+        margin-top:8px;
+        font-size:0;
+        div{
+            position:relative;
+            margin-left:8px;
+            padding-left:9px;
+            &:after{
+                position:absolute;
+                top:50%;
+                left:0;
+                width:1px;
+                height:12px;
+                margin-top:-6px;
+                background-color:#e6e6e6;
+                content:'';
+            }
+            &:first-child{
+                margin-left:0;
+                padding-left:0;
+                &:after{
+                    display:none;
+                }
+            }
+        }
+    }
+    &__date,&__count{
+        display:inline-block;
+        font-size:14px;
+        line-height:24px;
+        letter-spacing:-0.7px;
+        color:#acacac;
+    }
+    & ~ .pagination{
+        margin-top:64px;
+    }
+}
+@media screen and (max-width:1024px){
+    .column-list--half .column-list__item{
+        width:50%;
+        &:nth-child(2){
+            margin-top:0;
+        }
+    }
+    .column-list--half .column-list__name{
+        @include line-clamp(19,19,1);
+    }
+    .column-list--half .column-list__info{
+        padding-right:16px;
+    }
+    .slick-slider.doctor-card--box .doctor-card__top .doctor-info__name{
+        padding-right:0;
+        font-size:20px;
+        @include line-clamp(36,36,1);
+    }
+    .slick-slider.doctor-card--box .doctor-card__top .doctor-info__department{
+        padding-right:0;
+        @include line-clamp(28,28,1);
+    }
+    .slick-slider.doctor-card--box .doctor-card__image{
+        top:0;
+        right:10px;
+        width:100px;
+        height:100px;
+    }
+    .modify.slick-slider.doctor-card--box .doctor-card__image{
+        top:20px;
+    }
+    .slick-slider.doctor-card--box .doctor-card__top .doctor-info{
+        padding-right:90px;
+    }
+    .half-list{
+        &__name{
+            @include line-clamp(32,32,1);
+        }
+        .half-list__thumbnail{
+            width:200px;
+        }
+        .half-list__thumbnail ~ .half-list__contents{
+            width:calc(100% - 200px);
+            .half-list__title{
+                font-size:20px;
+                @include line-clamp(24,24,1);
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .card__thumbnail,.half-list__thumbnail{
+        max-width:100%;
+    }
+    .half-list{
+        &__item{
+            float:none;
+            width:100%;
+            margin-top:40px;
+            &:nth-child(2){
+                margin-top:40px;
+            }
+            &:first-child{
+                margin-top:0;
+            }
+            &:last-child{
+                .half-list__thumbnail ~ .half-list__contents{
+                    padding-bottom:0 !important;
+                }
+            }
+        }
+        &__thumbnail{
+            width:100% !important;
+            &--video{
+                &~.half-list__contents{
+                    width:100% !important;
+                    padding:10px 0 0;
+                }
+            }
+        }
+        &__contents{
+            width:100% !important;
+            padding:10px 0 0 0;
+        }
+        &__title{
+            font-size:16px !important;
+            font-weight:500;
+            letter-spacing:-0.8px;
+            @include line-clamp(28,56,2);
+        }
+        &__name{
+            margin-top:10px;
+            font-size:14px;
+            @include line-clamp(24,24,1);
+        }
+        &__date{
+            margin-top:4px;
+            font-size:12px;
+            line-height:18px;
+        }
+        & ~ .pagination{
+            margin-top:40px;
+        }
+    }
+    .card,.news{
+        &__list.slick-slider{
+            margin-left:-6px;
+        }
+        &__title{
+            font-size:16px;
+        }
+        &__name{
+            margin-top:10px;
+            font-size:14px;
+            line-height:24px;
+            letter-spacing:-0.7px;
+            &~.card__info{
+                margin-top:4px;
+            }
+        }
+        &__info-item{
+            margin-left:6px;
+            padding-left:7px;
+            font-size:12px;
+            line-height:18px;
+            &:after{
+                height:8px;
+                margin-top:-4px;
+            }
+        }
+        .slick-slider{
+            overflow:visible;
+            padding:0 10px;
+            .slick-slide{
+                width:266px;
+                margin:0;
+                padding:0 5px;
+            }
+            .slick-list{
+                overflow:visible !important;
+                margin-left:-20px;
+                padding-left:16px;
+            }
+            .slick-track{
+                margin-left:-5px;
+            }
+        }
+    }
+    .doctor-card--box{
+        overflow:visible;
+        &.slick-slider{
+            overflow:visible;
+            margin-left:-6px;
+            padding:0 10px;
+            .slick-slide{
+                width:266px;
+                margin:0;
+                padding:0 5px;
+            }
+            .slick-list{
+                overflow:visible !important;
+                margin-left:-20px;
+                padding-left:16px;
+            }
+            .slick-track{
+                margin-left:-5px;
+            }
+        }
+        .doctor-card__image{
+            right:10px;
+            width:100px;
+            height:100px;
+            background-color:#fff;
+        }
+        .doctor-card__item{
+            padding-top:10px;
+        }
+        .doctor-card__top{
+            height:73px;
+            .doctor-info__department{
+                font-size:14px;
+                line-height:24px;
+            }
+            .doctor-info__name{
+                padding-right:0;
+                font-size:18px;
+                line-height:28px;
+            }
+            .doctor-info{
+                padding-right:100px;
+            }
+        }
+        .doctor-card__anchor{
+            padding:20px;
+        }
+        .doctor-card__title{
+            position:static;
+            font-size:13px;
+            line-height:22px;
+        }
+        .doctor-card__text{
+            min-height:44px;
+            max-height:44px;
+            margin-top:6px;
+            padding-left:0; 
+            font-size:13px;
+            line-height:22px;
+        }
+    }
+    .column-list--half{
+        .column-list__item{
+            float:none;
+            width:100%;
+            margin-top:0;
+            &:nth-child(2){
+                margin-top:0;
+            }
+        }
+        .column-list__info{
+            padding:0 0 0 10px;
+        }
+        .column-list__title{
+            max-height:24px;
+            font-size:14px;
+            line-height:24px;
+        }
+        .column-list__text{
+            max-height:40px;
+            margin-top:6px;
+            font-size:12px;
+            line-height:20px;
+            -webkit-line-clamp:2;
+        }
+        .column-list__name{
+            max-height:20px;
+            margin-top:16px;
+            font-size:12px;
+            line-height:20px;
+        }
+        &.slick-slider{
+            overflow:visible;
+            padding:0 10px;
+            .slick-slide{
+                width:266px;
+                margin:0;
+                padding:0 5px;
+            }
+            .slick-list{
+                overflow:visible !important;
+                margin-left:-20px;
+                padding-left:16px;
+            }
+            .slick-track{
+                margin-left:-5px;
+            }
+            .column-list__title{
+                margin-top:12px;
+            }
+            .column-list__text{
+                margin-top:8px;
+            }
+            .column-list__info{
+                padding:0;
+            }
+        }
+    }
+    .card{
+        &__item{
+            float:none;
+            width:100%;
+            margin-left:0;
+            margin-top:40px;
+            &:first-child{
+                margin-top:0;
+            }
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+                margin-top:40px;
+            }
+        }
+        & ~ .pagination{
+            margin-top:40px;
+        }
+    }
+    .doctor-card__anchor--label{
+        margin-top:22px;
+    }
+    .preview-list{
+        margin-top:40px;
+        &__item{
+            float:none;
+            width:100%;
+            margin:24px 0 0;
+            padding-top:16px;
+            &:nth-child(2),
+            &:nth-child(3){
+                margin-top:24px;
+            }
+        }
+        &__title{
+            min-height:auto;
+            max-height:56px;
+            font-size:16px;
+            line-height:28px;
+            letter-spacing:-0.8px;
+        }
+        &__name{
+            margin-top:10px;
+            font-size:14px;
+            letter-spacing:-0.7px;
+        }
+        &__info{
+            margin-top:4px;
+            div{
+                margin-left:10px;
+                padding-left:11px;
+                &:after{
+                    height:10px;
+                    margin-top:-5px;
+                }
+            }
+        }
+        &__date,&__count{
+            font-size:12px;
+            letter-spacing:-0.6px;
+        }
+        & ~ .pagination{
+            margin-top:40px;
+        }
+    }
+}

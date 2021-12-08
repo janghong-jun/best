@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('../include/meta.html')
+    <title>공지사항 등록 | 명의</title>
+@@include('../include/css.html')
+</head>
+<body>
+@@include('../include/skip.html')
+
+<div id="wrap">
+@@include('../include/header.html')
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <div class="title-sub">공지사항</div>
+                <div class="board-write">
+                    <div class="board-write__item">
+                        <div class="board-write__title">작성자</div>
+                        <div class="board-write__content"><div class="board-write__name">홍길동</div></div>
+                    </div>
+                    <div class="board-write__item">
+                        <div class="board-write__title board-write__title--top-title">제목</div>
+                        <div class="board-write__content">
+                            <div class="board-write__input-wrap">
+                                <input type="text" class="board-write__input" placeholder="제목을 입력하세요" title="제목입력">
+                                <div class="board-write__important">
+                                    <input type="checkbox" id="notice" class="board-write__checkbox">
+                                    <label for="notice" class="board-write__label">공지설정</label>
+                                </div>
+                            </div>
+                            <div class="title-option">
+                                <div class="title-option__item">
+                                    <input type="checkbox" id="textBold" class="title-option__checkbox">
+                                    <label for="textBold" class="title-option__label">진하게</label>
+                                </div>
+                                <div class="title-option__item">
+                                    <input type="checkbox" id="textItalic" class="title-option__checkbox">
+                                    <label for="textItalic" class="title-option__label">기울임</label>
+                                </div>
+                                <div class="title-option__item">
+                                    <input type="checkbox" id="textUnderline" class="title-option__checkbox">
+                                    <label for="textUnderline" class="title-option__label">밑줄</label>
+                                </div>
+                                <div class="title-option__item">
+                                    <!-- 글자색상값 = value -->
+                                    <input type="hidden" id="textColor" class="textColor" value="#333333">
+                                    <label for="textColor" class="title-option__label title-option__label--color">글자색상</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-write__item">
+                        <div class="board-write__title">내용</div>
+                        <div class="board-write__content">
+                            <div>에디터영역</div>
+                        </div>
+                    </div>
+                    <div class="board-write__item">
+                        <div class="board-write__title board-write__title--top-file">파일첨부</div>
+                        <div class="board-write__content">
+                            <div class="board-write__file-wrap">
+                                <label for="addFile" class="board-write__file-label">
+                                    <input type="file" id="addFile" class="board-write__file">
+                                    첨부 파일 선택하기
+                                </label>
+                                <!-- 첨부파일 추가시 노출 -->
+                                <div class="file">
+                                    <div class="file__name">filename.jpg</div>
+                                    <button type="button" class="file__delete"><span class="blind">파일 삭제</span></button>
+                                </div>
+                            </div>
+                            <div class="board-write__file-info">
+                                파일 용량 : <span>30MB, 1개</span> 까지 업로드가 가능합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 211109 수정 -->
+                <div class="button-wrap button-wrap--right">
+                    <a href="#" class="button button__round">목록으로</a>
+                    <a href="#" class="button button__round desktop">미리보기</a>
+                    <a href="#" class="button button__round button__round--blue">등록</a>
+                </div>
+                <!-- //211109 수정 -->
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+@@include('../include/footer.html')
+</div>
+<!-- e : wrap -->
+</body>
+@@include('../include/script.html')
+</html>

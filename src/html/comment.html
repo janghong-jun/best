@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('../include/meta.html')
+    <title>명의</title>
+@@include('../include/css.html')
+</head>
+<body>
+@@include('../include/skip.html')
+
+<div id="wrap">
+@@include('../include/header.html')
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <h1 class="title-main">로그인 하지 않은 경우</h1>
+                <div class="comment">
+                    <div class="comment__total">
+                        <div class="comment__title">댓글</div>
+                        <div class="comment__number">총 <span>2</span>개</div>
+                    </div>
+                    <div class="comment__form">
+                        <div class="comment__wrap">
+                            <button type="button" class="comment__textarea">댓글을 남기려면 로그인 해주세요</button>
+                        </div>
+                        <button type="button" class="comment__submit">등록</button>
+                        <div class="comment-sns">
+                            <span class="comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></span>
+                            <span class="comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></span>
+                            <span class="comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></span>
+                        </div>
+                    </div>   
+                </div>
+                <!-- 211116 기획 수정 -->
+                <div class="comment-sort">
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor is-active">최신순</a></div>
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor">인기순</a></div>
+                </div>
+                <!-- //211116 기획 수정 -->
+                <div class="comment-list">
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                            <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">0</div>
+                        </div>
+                    </div>
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                            <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--first disabled" type="button"><span class="hide">첫페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--prev disabled" type="button"><span class="hide">이전페이지</span></button>
+                    <div class="pagination__number-area">
+                        <!-- 현재 페이지 is-active 클래스 추가 및 strong 태그 -->
+                        <strong class="pagination__number is-active">01</strong>
+                        <a href="#" class="pagination__number">02</a>
+                    </div>
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--next" type="button"><span class="hide">다음페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--last" type="button"><span class="hide">마지막 페이지</span></button>
+                </div>
+                <br><br><br>
+                <h1 class="title-main">댓글이 없는 경우</h1>
+                <div class="comment">
+                    <div class="comment__total">
+                        <div class="comment__title">댓글</div>
+                        <div class="comment__number">총 <span>0</span>개</div>
+                    </div>
+                    <div class="comment__form">
+                        <div class="comment__wrap">
+                            <button type="button" class="comment__textarea">댓글을 남기려면 로그인 해주세요</button>
+                        </div>
+                        <button type="button" class="comment__submit">등록</button>
+                        <div class="comment-sns">
+                            <span class="comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></span>
+                            <span class="comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></span>
+                            <span class="comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="comment-list">
+                    <div class="comment-list__item">
+                        <div class="comment-list__nodata">작성된 댓글이 없습니다</div>
+                    </div>
+                </div>
+                <br><br><br>
+                <h1 class="title-main">사용자 로그인 시</h1>
+                <div class="comment">
+                    <div class="comment__total">
+                        <div class="comment__title">댓글</div>
+                        <div class="comment__number">총 <span>2</span>개</div>
+                    </div>                     
+                    <div class="comment__form">
+                        <div class="comment__wrap">
+                            <div class="comment__info">
+                                <div class="comment__writer">홍길동</div>
+                                <div class="comment__bytes"><span>0</span>/250 bytes</div>
+                            </div>
+                            <textarea class="comment__textarea" title="댓글 입력" placeholder="댓글을 입력해주세요"></textarea>
+                        </div>
+                        <button type="button" class="comment__submit">등록</button>
+                        <div class="comment-sns">
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></button>
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></button>
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 211116 기획 수정 -->
+                <div class="comment-sort">
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor is-active">최신순</a></div>
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor">인기순</a></div>
+                </div>
+                <!-- //211116 기획 수정 -->
+                <div class="comment-list">
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                            <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                            <a href="#" class="comment-list__info-item  comment-list__anchor">삭제</a>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">0</div>
+                        </div>
+                    </div>
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                            <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like is-active">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--first disabled" type="button"><span class="hide">첫페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--prev disabled" type="button"><span class="hide">이전페이지</span></button>
+                    <div class="pagination__number-area">
+                        <!-- 현재 페이지 is-active 클래스 추가 및 strong 태그 -->
+                        <strong class="pagination__number is-active">01</strong>
+                        <a href="#" class="pagination__number">02</a>
+                    </div>
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--next" type="button"><span class="hide">다음페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--last" type="button"><span class="hide">마지막 페이지</span></button>
+                </div>
+                <br><br><br>
+                <h1 class="title-main">관리자 로그인 시</h1>
+                <div class="comment">
+                    <div class="comment__total">
+                        <div class="comment__title">댓글</div>
+                        <div class="comment__number">총 <span>2</span>개</div>
+                    </div>                     
+                    <div class="comment__form">
+                        <div class="comment__wrap">
+                            <div class="comment__info">
+                                <div class="comment__writer">홍길동</div>
+                                <div class="comment__bytes"><span>0</span>/250 bytes</div>
+                            </div>
+                            <textarea class="comment__textarea" title="댓글 입력" placeholder="댓글을 입력해주세요"></textarea>
+                        </div>
+                        <button type="button" class="comment__submit">등록</button>
+                        <div class="comment-sns">
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></button>
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></button>
+                            <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 211116 기획 수정 -->
+                <div class="comment-sort">
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor is-active">최신순</a></div>
+                    <div class="comment-sort__item"><a href="#" class="comment-sort__anchor">인기순</a></div>
+                </div>
+                <!-- //211116 기획 수정 -->
+                <!-- 관리자 로그인시 comment-list--admin 추가 -->
+                <div class="comment-list comment-list--admin">
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">0</div>
+                        </div>
+                        <a href="#" class="button button__gray-square">블라인드</a>
+                    </div>
+                    <div class="comment-list__item">
+                        <div class="comment-list__info">
+                            <span class="comment-list__info-item comment-list__name">박**</span>
+                            <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                        </div>
+                        <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                        <div class="comment-like is-active">
+                            <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                            <div class="comment-like__count">2</div>
+                        </div>
+                        <a href="#" class="button button__gray-square">블라인드</a>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--first disabled" type="button"><span class="hide">첫페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--prev disabled" type="button"><span class="hide">이전페이지</span></button>
+                    <div class="pagination__number-area">
+                        <!-- 현재 페이지 is-active 클래스 추가 및 strong 태그 -->
+                        <strong class="pagination__number is-active">01</strong>
+                        <a href="#" class="pagination__number">02</a>
+                    </div>
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--next" type="button"><span class="hide">다음페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--last" type="button"><span class="hide">마지막 페이지</span></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+@@include('../include/footer.html')
+</div>
+<!-- e : wrap -->
+</body>
+@@include('../include/script.html')
+</html>

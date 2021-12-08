@@ -1,0 +1,33 @@
+.blind{
+  overflow:hidden;
+  position:absolute;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  padding:0;
+  clip:rect(0,0,0,0);
+  border:0
+}
+.desktop{
+  display:block !important;
+  &.button{
+    display:inline-block !important;
+  }
+}
+.mobile{
+  display:none !important;
+}
+@media screen and (max-width:767px){
+  .desktop{
+    display:none !important;
+    &.button{
+      display:none !important;
+    }
+  }
+  .mobile{
+    display:block !important;
+  }
+}
+.bold{
+  font-weight:700;
+}

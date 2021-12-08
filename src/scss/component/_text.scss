@@ -1,0 +1,6 @@
+div[data-element=toggle-list]{
+    display:none;
+    &.is-active{
+        display:block;
+    }
+} 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('../include/meta.html')
+    <title>명의</title>
+@@include('../include/css.html')
+</head>
+<body>
+@@include('../include/skip.html')
+
+<div id="wrap">
+@@include('../include/header.html')
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <button data-element="modal__open" data-target="#popShare">공유하기</button>
+                <div id="popShare" class="pualugin-modal__element popup popup--small" data-element="modal__element">
+                    <div class="pualugin-modal__container" data-element="modal__element-container">
+                        <div class="pualugin-modal__header">공유하기</div>
+                        <div class="pualugin-modal__contents" data-element="modal__element-contetns">
+                            <div class="share-list">
+                                <div class="share-list__item">
+                                    <!-- 211111 sns공유하기 수정 -->
+                                    <a href="#" class="share-list__anchor share-list__anchor--kakako">카카오스토리</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--facebook">페이스북</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--band">밴드</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--blog">블로그</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--twitter">트위터</a>
+                                </div>
+                                <div class="share-list__item">
+                                    <a href="#" class="share-list__anchor share-list__anchor--copy">URL복사</a>
+                                </div>
+                            </div>
+                            <button class="pualugin-modal__close" data-element="modal__close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button data-element="modal__open" data-target="#popReport">신고하기</button>
+                <div id="popReport" class="pualugin-modal__element popup popup--big" data-element="modal__element">
+                    <div class="pualugin-modal__container" data-element="modal__element-container">
+                        <div class="pualugin-modal__header">신고하기</div>
+                        <div class="pualugin-modal__contents" data-element="modal__element-contetns">
+                            <div class="report">
+                                <div class="report__top">
+                                    <div class="report__top-title">신고 전에 잠깐!</div>
+                                    <div class="report__top-text">1. 불건전한 게시글에 대해서만 신고해주세요.</div>
+                                    <div class="report__top-text">2. 신고가 5회 이상 누적되는 경우, 해당 게시글은 블라인드. 처리되어 조회되지 않습니다.</div>
+                                    <div class="report__top-text">3. 허위 신고자는 불량회원으로 등록되어 일정기간 게시글 및 댓글 작성이 안됩니다.</div>
+                                </div>
+                                <div class="report__title">신고 사유를 선택해주세요</div>
+                                <div class="report__text">여러 사유에 해당되는 경우에는 대표적인 경우 하나를 선택해주세요.</div>
+                                <div class="report__radio-wrap">
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report01" class="report__input">
+                                        <label class="report__label" for="report01">타인에 대한 욕설 또는 비방</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report02" class="report__input">
+                                        <label class="report__label" for="report02">불법 정보 유출</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report03" class="report__input">
+                                        <label class="report__label" for="report03">인신공격 및 명예 훼손</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report04" class="report__input">
+                                        <label class="report__label" for="report04">같은 내용의 반복 (도배)</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report05" class="report__input">
+                                        <label class="report__label" for="report05">음란성 내용 및 음란물 링크</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report06" class="report__input">
+                                        <label class="report__label" for="report06">폭력 또는 사행심 조장</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report07" class="report__input">
+                                        <label class="report__label" for="report07">상업적 광고, 사이트/홈피 홍보</label>
+                                    </div>
+                                    <div class="report__radio-item">
+                                        <input type="radio" name="report" id="report08" class="report__input">
+                                        <label class="report__label" for="report08">게시판 성격에 맞지 않는 내용</label>
+                                    </div>
+                                </div>
+                                <div class="button-wrap">
+                                    <button type="button" class="button button__round" data-element="modal__close">취소</button>
+                                    <button type="button" class="button button__round button__round--blue">신고하기</button>
+                                </div>
+                            </div>
+                            <button class="pualugin-modal__close" data-element="modal__close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+@@include('../include/footer.html')
+</div>
+<!-- e : wrap -->
+</body>
+@@include('../include/script.html')
+</html>

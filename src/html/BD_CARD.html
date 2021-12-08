@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('../include/meta.html')
+    <title>카드뉴스 목록 | 명의</title>
+@@include('../include/css.html')
+</head>
+<body>
+@@include('../include/skip.html')
+
+<div id="wrap">
+@@include('../include/header.html')
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <div class="title-main">
+                    카드뉴스<span></span>
+                    <div class="search-contents">
+                        <input type="text" class="search-contents__item" title="검색어 입력" placeholder="카드뉴스을 검색해주세요">
+                        <button type="button" class="search-contents__anchor"><span class="blind">카드뉴스 검색</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__inner">
+                <!-- 211207 정렬 추가 -->
+                <div class="data-sort">
+                    <div class="data-sort__item ">
+                        <button type="button" class="data-sort__anchor is-active"><span>HIT 순</span></button>
+                    </div>
+                    <div class="data-sort__item">
+                        <button type="button" class="data-sort__anchor"><span>좋아요순</span></button>
+                    </div>
+                </div>
+                <!-- //211207 정렬 추가 -->
+                <div class="card-news">
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news01.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [정형외과 전문의 김양수 교수] 어깨 통증에는 무조건 운동이 좋나요?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news02.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [피부과 전문의 문제호 교수] 자외선은 왜 피부암을 유발하나요?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news01.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [정형외과 전문의 김양수 교수] 어깨 통증에는 무조건 운동이 좋나요?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news02.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [피부과 전문의 문제호 교수] 자외선은 왜 피부암을 유발하나요?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news01.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [정형외과 전문의 김양수 교수] 어깨 통증에는 무조건 운동이 좋나요?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news02.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [피부과 전문의 문제호 교수] 자외선은 왜 피부암을 유발하나요?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news01.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [정형외과 전문의 김양수 교수] 어깨 통증에는 무조건 운동이 좋나요?
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-news__item">
+                        <a href="#" class="card-news__anchor">
+                            <div class="card-news__thumbnail">
+                                <img src="../images/img_news02.jpg" alt="">
+                            </div>
+                            <div class="card-news__title">
+                                [피부과 전문의 문제호 교수] 자외선은 왜 피부암을 유발하나요?
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--first disabled" type="button"><span class="hide">첫페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--prev disabled" type="button"><span class="hide">이전페이지</span></button>
+                    <div class="pagination__number-area">
+                        <!-- 현재 페이지 is-active 클래스 추가 및 strong 태그 -->
+                        <strong class="pagination__number is-active">01</strong>
+                        <a href="#" class="pagination__number">02</a>
+                        <a href="#" class="pagination__number">03</a>
+                        <a href="#" class="pagination__number">04</a>
+                        <a href="#" class="pagination__number">05</a>
+                    </div>
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--next" type="button"><span class="hide">다음페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--last" type="button"><span class="hide">마지막 페이지</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__inner">
+                <div class="banner">
+                    <a href="#" class="banner__anchor"><img src="../images/img_banner.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+@@include('../include/footer.html')
+</div>
+<!-- e : wrap -->
+</body>
+@@include('../include/script.html')
+</html>

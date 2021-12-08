@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="pualugin-js">Pualugin.js</h1>
+    <p>Pualugin.js 는 boilerplate code로 작성한 jQuery UI 플러그인 모음입니다.<br>
+        모든 플러그인은 접근성 및 반응형을 지원합니다.</p>
+    <h2 id="toggle">Toggle</h2>
+    <ul>
+        <li>toggle__anchor는 모든 태그로 사용가능합니다. ( ex: button, div, span ..... )</li>
+        <li>초기값은 toggle_panel이 숨겨진 상태입니다.</li>
+    </ul>
+    <h3 id="basic-code">Basic Code</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"your-element"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"toggle"</span>&gt;
+    &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"toggle__anchor"</span>&gt;toggle__anchor&lt;/<span class="hljs-keyword">a</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"toggle__panel"</span>&gt;toggle__panel&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="basic-code-options">Basic Code + Options</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"your-element"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"toggle"</span> data-options=<span class="hljs-string">'{ "isOpened": true }'</span>&gt;
+    &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"toggle__anchor"</span>&gt;toggle__anchor&lt;/<span class="hljs-keyword">a</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"toggle__panel"</span>&gt;toggle__panel&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="options">Options</h3>
+    <ul>
+        <li><strong>mode</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: static</li>
+                <li><strong>description</strong>: <strong>static</strong>, <strong>slide</strong>, <strong>fade</strong>
+                    중 선택</li>
+            </ul>
+        </li>
+        <li><strong>isOpened</strong>
+            <ul>
+                <li><strong>type</strong>: Boolean</li>
+                <li><strong>default</strong>: false</li>
+                <li><strong>description</strong>: 초기에 toggle__panel 노출 여부를 설정</li>
+            </ul>
+        </li>
+        <li><strong>event</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: click</li>
+                <li><strong>description</strong>: <strong>click</strong>, <strong>focusin</strong> 중 선택</li>
+            </ul>
+        </li>
+        <li><strong>easing</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: swing</li>
+            </ul>
+        </li>
+        <li><strong>activeClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: is-active</li>
+                <li><strong>description</strong>: 원하는 클래스명으로 변경 가능</li>
+            </ul>
+        </li>
+        <li><strong>onChangeBeforeText</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: null</li>
+                <li><strong>description</strong>: panel 오픈 전 노출될 anchor 텍스트</li>
+            </ul>
+        </li>
+        <li><strong>onChangeAfterText</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: null</li>
+                <li><strong>description</strong>: panel 오픈 후 노출될 anchor 텍스트</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="events">Events</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'.your-element'</span>);
+
+yourVariable.on(<span class="hljs-string">'beforeChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, anchor, panel </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+
+yourVariable.on(<span class="hljs-string">'afterChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, anchor, panel </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+</code></pre>
+    <ul>
+        <li><strong>beforeChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, anchor, panel</li>
+                <li><strong>description</strong>: 패널 오픈 전 실행될 함수</li>
+            </ul>
+        </li>
+        <li><strong>afterChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, anchor, panel</li>
+                <li><strong>description</strong>: 패널 오픈 후 실행될 함수</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="method">Method</h3>
+    <pre><code class="lang-javascript">var yourVariable = $(<span class="hljs-string">'.your-element'</span>)<span class="hljs-meta">.data</span>(<span class="hljs-string">'plugin_toggle'</span>)<span class="hljs-comment">;</span>
+
+yourVariable.<span class="hljs-keyword">show();
+</span>
+yourVariable.hide()<span class="hljs-comment">;</span>
+
+yourVariable.destroy()<span class="hljs-comment">;</span>
+
+yourVariable.reInit()<span class="hljs-comment">;</span>
+</code></pre>
+    <ul>
+        <li><strong>show</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 패널 열기</li>
+            </ul>
+        </li>
+        <li><strong>hide</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 패널 닫기</li>
+            </ul>
+        </li>
+        <li><strong>destroy</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화</li>
+            </ul>
+        </li>
+        <li><strong>reInit</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화 후 재생성</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p>모든 플러그인은 기본적으로 <strong>페이지 렌더링시 Initialized</strong> 됩니다.<br>
+        <strong>개별적(비동기 마크업 구현) Initialized</strong> 필요한 경우 아래와 같이 진행합니다.</p>
+    <hr>
+    <pre><code class="lang-javascript">$<span class="hljs-comment">('.your-element')</span>.toggle<span class="hljs-comment">()</span>; <span class="hljs-comment">// Initialized</span>
+</code></pre>
+    <h2 id="tooltip-popover">Tooltip &amp; Popover</h2>
+    <h3 id="tooltip">Tooltip</h3>
+    <h3 id="-basic-code">- Basic Code</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"pualugin-tooltip"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tooltip"</span>&gt;
+  &lt;button class=<span class="hljs-string">"pualugin__button"</span> type=<span class="hljs-string">"button"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tooltip__button"</span>&gt;Hover <span class="hljs-built_in">to</span> <span class="hljs-literal">right</span>!&lt;/button&gt;
+  &lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"pualugin-tooltip__panel"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tooltip__panel"</span>&gt;
+    <span class="hljs-built_in">to</span> <span class="hljs-literal">right</span>.
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="-basic-code-options">- Basic Code + Options</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"pualugin-tooltip"</span> data-element=<span class="hljs-string">"tooltip"</span> data-options='{ <span class="hljs-string">"position"</span>: <span class="hljs-string">"left"</span> }'&gt;
+  &lt;button <span class="hljs-built_in">class</span>=<span class="hljs-string">"pualugin__button"</span> type=<span class="hljs-string">"button"</span> data-element=<span class="hljs-string">"tooltip__button"</span>&gt;Hover <span class="hljs-keyword">to</span> left!&lt;/button&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"pualugin-tooltip__panel"</span> data-element=<span class="hljs-string">"tooltip__panel"</span>&gt;
+    <span class="hljs-keyword">to</span> right.
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="popover">Popover</h3>
+    <h3 id="-basic-code">- Basic Code</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"pualugin-tooltip"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tooltip"</span> data-options=<span class="hljs-string">'{"mode": "popover"}'</span>&gt;
+  &lt;button class=<span class="hljs-string">"pualugin__button"</span> type=<span class="hljs-string">"button"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tooltip__button"</span>&gt;Click <span class="hljs-built_in">to</span> <span class="hljs-literal">right</span>!&lt;/button&gt;
+  &lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"pualugin-tooltip__panel"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tooltip__panel"</span>&gt;
+    <span class="hljs-built_in">to</span> <span class="hljs-literal">right</span>.
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="popover-basic-code-options">Popover - Basic Code + Options</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"pualugin-tooltip"</span> data-element=<span class="hljs-string">"tooltip"</span> data-options='{<span class="hljs-string">"mode"</span>: <span class="hljs-string">"popover"</span>, <span class="hljs-string">"position"</span>: <span class="hljs-string">"left"</span>}'&gt;
+  &lt;button <span class="hljs-built_in">class</span>=<span class="hljs-string">"pualugin__button"</span> type=<span class="hljs-string">"button"</span> data-element=<span class="hljs-string">"tooltip__button"</span>&gt;Click <span class="hljs-keyword">to</span> right!&lt;/button&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"pualugin-tooltip__panel"</span> data-element=<span class="hljs-string">"tooltip__panel"</span>&gt;
+    <span class="hljs-keyword">to</span> right.
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="options">Options</h3>
+    <ul>
+        <li><strong>mode</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: tooltip
+                    description: tooltip, popover 중 선택</li>
+            </ul>
+        </li>
+        <li><strong>position</strong>
+            <ul>
+                <li><strong>type*</strong>: String</li>
+                <li><strong>default</strong>: right</li>
+                <li><em>description</em>: right, left, top, bottom 중 선택</li>
+            </ul>
+        </li>
+        <li><strong>indent</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 10</li>
+                <li><strong>description</strong>: Button 과 Panel의 간격</li>
+            </ul>
+        </li>
+        <li><strong>activeClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: is-active</li>
+                <li><strong>description</strong>: 토글 활성화 클래스</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="method">Method</h3>
+    <pre><code class="lang-javascript">var yourVariable = $(<span class="hljs-string">'.your-element'</span>)<span class="hljs-meta">.data</span>(<span class="hljs-string">'plugin_tooltip'</span>)<span class="hljs-comment">;</span>
+
+yourVariable.<span class="hljs-keyword">show();
+</span>
+yourVariable.hide()<span class="hljs-comment">;</span>
+
+yourVariable.destroy()<span class="hljs-comment">;</span>
+
+yourVariable.reInit()<span class="hljs-comment">;</span>
+</code></pre>
+    <ul>
+        <li><strong>show</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 패널 열기</li>
+            </ul>
+        </li>
+        <li><strong>hide</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 패널 닫기</li>
+            </ul>
+        </li>
+        <li><strong>destroy</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화</li>
+            </ul>
+        </li>
+        <li><strong>reInit</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화 후 재생성</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p>모든 플러그인은 기본적으로 <strong>페이지 렌더링시 Initialized</strong> 됩니다.<br>
+        <strong>개별적(비동기 마크업 구현) Initialized</strong> 필요한 경우 아래와 같이 진행합니다.</p>
+    <hr>
+    <pre><code class="lang-javascript">$<span class="hljs-comment">('.your-element')</span>.tooltip<span class="hljs-comment">()</span>; <span class="hljs-comment">// Initialized</span>
+</code></pre>
+    <h2 id="tab">Tab</h2>
+    <h3 id="basic-code">Basic Code</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"your-element"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab"</span>&gt;
+    &lt;ul&gt;
+        &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__list"</span>&gt;
+            &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__anchor"</span>&gt;<span class="hljs-literal">tab</span>-anchor1&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;/li&gt;
+        &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__list"</span>&gt;
+            &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__anchor"</span>&gt;<span class="hljs-literal">tab</span>-anchor2&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;/li&gt;
+        &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__list"</span>&gt;
+            &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__anchor"</span>&gt;<span class="hljs-literal">tab</span>-anchor3&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__panel"</span>&gt; <span class="hljs-literal">tab</span>-panel1 &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__panel"</span>&gt; <span class="hljs-literal">tab</span>-panel2 &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__panel"</span>&gt; <span class="hljs-literal">tab</span>-panel3 &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="basic-code-options">Basic Code + Options</h3>
+    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"your-element"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab"</span> data-options=<span class="hljs-string">'{ "mode": "slide" }'</span>&gt;
+    &lt;ul&gt;
+        &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__list"</span>&gt;
+            &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__anchor"</span>&gt;<span class="hljs-literal">tab</span>-anchor1&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;/li&gt;
+        &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__list"</span>&gt;
+            &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__anchor"</span>&gt;<span class="hljs-literal">tab</span>-anchor2&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;/li&gt;
+        &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__list"</span>&gt;
+            &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__anchor"</span>&gt;<span class="hljs-literal">tab</span>-anchor3&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__panel"</span>&gt; <span class="hljs-literal">tab</span>-panel1 &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__panel"</span>&gt; <span class="hljs-literal">tab</span>-panel2 &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"tab__panel"</span>&gt; <span class="hljs-literal">tab</span>-panel3 &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+    <h3 id="options">Options</h3>
+    <ul>
+        <li><strong>mode</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: static</li>
+                <li><strong>description</strong>: <strong>static</strong>, <strong>slide</strong>, <strong>fade</strong>
+                    중 선택</li>
+            </ul>
+        </li>
+        <li><strong>speed</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 300</li>
+            </ul>
+        </li>
+        <li><strong>event</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: click</li>
+                <li><strong>description</strong>: <strong>click</strong>, <strong>focusin</strong> 중 선택</li>
+            </ul>
+        </li>
+        <li><strong>initIndex</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 0</li>
+                <li><strong>description</strong>: 원하는 탭 순서로 초기화</li>
+            </ul>
+        </li>
+        <li><strong>easing</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: swing</li>
+            </ul>
+        </li>
+        <li><strong>activeClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: is-active</li>
+                <li><strong>description</strong>: 원하는 클래스명으로 변경 가능</li>
+            </ul>
+        </li>
+        <li><strong>diabledClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: is-disabled</li>
+                <li><strong>description</strong>: 원하는 클래스명으로 변경 가능</li>
+            </ul>
+        </li>
+        <li><strong>selectedText</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: Selected</li>
+                <li><strong>description</strong>: 원하는 명칭으로 변경 가능 (title 속성으로 들어갑니다.)</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="events">Events</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'.your-element'</span>);
+
+yourVariable.on(<span class="hljs-string">'beforeChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, anchor, panel </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+
+yourVariable.on(<span class="hljs-string">'afterChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, anchor, panel </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+</code></pre>
+    <ul>
+        <li><strong>beforeChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, anchor, panel</li>
+                <li><strong>description</strong>: Tab 오픈 전 실행될 함수</li>
+            </ul>
+        </li>
+        <li><strong>afterChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, anchor, panel</li>
+                <li><strong>description</strong>: Tab 오픈 후 실행될 함수 함수</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="method">Method</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'.your-element'</span>).data(<span class="hljs-string">'plugin_tab'</span>);
+
+yourVariable.<span class="hljs-keyword">go</span>(<span class="hljs-number">1</span>); <span class="hljs-comment">//OR</span>
+yourVariable.<span class="hljs-keyword">go</span>(<span class="hljs-number">2</span>, <span class="hljs-literal">true</span>); <span class="hljs-comment">//OR</span>
+yourVariable.<span class="hljs-keyword">go</span>(<span class="hljs-number">0</span>, <span class="hljs-literal">false</span>); <span class="hljs-comment">//OR</span>
+
+yourVariable.destroy();
+
+yourVariable.reInit();
+</code></pre>
+    <ul>
+        <li><strong>go</strong>
+            <ul>
+                <li><strong>Arguments</strong>: index(Number), withScroll(Boolean): 선택된 탭의 상단으로 스크롤 이동 여부</li>
+                <li><strong>description</strong>: 원하는 탭 오픈</li>
+            </ul>
+        </li>
+        <li><strong>destroy</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화</li>
+            </ul>
+        </li>
+        <li><strong>reInit</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화 후 재생성 <strong>ex) 비동기로 탭이 추가 된 경우 사용</strong></li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p>모든 플러그인은 기본적으로 <strong>페이지 렌더링시 Initialized</strong> 됩니다.<br>
+        <strong>개별적(비동기 마크업 구현) Initialized</strong> 필요한 경우 아래와 같이 진행합니다.</p>
+    <hr>
+    <pre><code class="lang-javascript">$<span class="hljs-comment">('.your-element')</span>.tab<span class="hljs-comment">()</span>; <span class="hljs-comment">// Initialized</span>
+</code></pre>
+    <h2 id="accordion">Accordion</h2>
+    <p>Accordion은 tab<strong>anchor 클릭 시 해당하는 tab</strong>panel 노출됨.</p>
+    <h3 id="basic-code">Basic Code</h3>
+    <pre><code class="lang-html">&lt;ul data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion"</span>&gt;
+    &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__item"</span>&gt;
+        &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__anchor"</span>&gt;accordion__anchor1&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__panel"</span>&gt;accordion__panel1&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/li&gt;
+    &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__item"</span>&gt;
+        &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__anchor"</span>&gt;accordion__anchor2&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__panel"</span>&gt;accordion__panel2&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/li&gt;
+    &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__item"</span>&gt;
+        &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__anchor"</span>&gt;accordion__anchor3&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__panel"</span>&gt;accordion__panel3&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+    <h3 id="basic-code-options">Basic Code + Options</h3>
+    <pre><code class="lang-html">&lt;ul data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion"</span> data-options=<span class="hljs-string">'{"autoFold":false}'</span>&gt;
+    &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__item"</span>&gt;
+        &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__anchor"</span>&gt;accordion__anchor1&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__panel"</span>&gt;accordion__panel1&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/li&gt;
+    &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__item"</span>&gt;
+        &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__anchor"</span>&gt;accordion__anchor2&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__panel"</span>&gt;accordion__panel2&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/li&gt;
+    &lt;li data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__item"</span>&gt;
+        &lt;<span class="hljs-keyword">a</span> href=<span class="hljs-string">"#"</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__anchor"</span>&gt;accordion__anchor3&lt;/<span class="hljs-keyword">a</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> data-<span class="hljs-keyword">element</span>=<span class="hljs-string">"accordion__panel"</span>&gt;accordion__panel3&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+    <hr>
+    <p>모든 플러그인은 기본적으로 <strong>페이지 렌더링시 Initialized</strong> 됩니다.<br>
+        <strong>개별적(비동기 마크업 구현) Initialized</strong> 필요한 경우 아래와 같이 진행합니다.</p>
+    <hr>
+    <pre><code class="lang-javascript"><span class="hljs-variable">$(</span><span class="hljs-string">'.your-element'</span>).accordion(); <span class="hljs-regexp">//</span> Initialized
+</code></pre>
+    <h3 id="options">Options</h3>
+    <ul>
+        <li><strong>mode</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: static</li>
+                <li><strong>description</strong>: <strong>static</strong>, <strong>slide</strong>, 중 선택</li>
+            </ul>
+        </li>
+        <li><strong>speed</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 300</li>
+            </ul>
+        </li>
+        <li><strong>easing</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: swing</li>
+            </ul>
+        </li>
+        <li><strong>isInitActive</strong>
+            <ul>
+                <li><strong>type</strong>: Boolean</li>
+                <li><strong>default</strong>: true</li>
+                <li><strong>description</strong>: 초기화시 패널 오픈여부</li>
+            </ul>
+        </li>
+        <li><strong>initIndex</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 0</li>
+                <li><strong>description</strong>: 초기화시 오픈될 패널 index</li>
+            </ul>
+        </li>
+        <li><strong>autoFold</strong>
+            <ul>
+                <li><strong>type</strong>: Boolean</li>
+                <li><strong>default</strong>: true</li>
+                <li><strong>description</strong>: 탭 클릭 시 기존에 열려있던 탭 닫기</li>
+            </ul>
+        </li>
+        <li><strong>autoScroll</strong>
+            <ul>
+                <li><strong>type</strong>: Boolean</li>
+                <li><strong>default</strong>: false</li>
+                <li><strong>description</strong>: 선택한 탭의 위치로 자동 스크롤</li>
+            </ul>
+        </li>
+        <li><strong>activeClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: is-active</li>
+                <li><strong>description</strong>: 원하는 클래스명으로 변경 가능</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="events">Events</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'.your-element'</span>);
+
+yourVariable.on(<span class="hljs-string">'beforeChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, anchor, panel </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+
+yourVariable.on(<span class="hljs-string">'afterChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, anchor, panel </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+</code></pre>
+    <ul>
+        <li><strong>beforeChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, anchor</li>
+                <li><strong>description</strong>: Accordion 오픈 전 실행될 함수</li>
+            </ul>
+        </li>
+        <li><strong>afterChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, anchor</li>
+                <li><strong>description</strong>: Accordion 오픈 후 실행될 함수</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="method">Method</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'.your-element'</span>).data(<span class="hljs-string">'plugin_accordion'</span>);
+
+yourVariable.<span class="hljs-keyword">go</span>(<span class="hljs-number">1</span>); <span class="hljs-comment">//OR</span>
+yourVariable.<span class="hljs-keyword">go</span>(<span class="hljs-number">2</span>, <span class="hljs-literal">true</span>); <span class="hljs-comment">//OR</span>
+yourVariable.<span class="hljs-keyword">go</span>(<span class="hljs-number">0</span>, <span class="hljs-literal">false</span>); <span class="hljs-comment">//OR</span>
+
+yourVariable.destroy();
+
+yourVariable.reInit();
+</code></pre>
+    <ul>
+        <li><strong>go</strong>
+            <ul>
+                <li><strong>Arguments</strong>: index(Number), withScroll(Boolean): 선택된 탭의 상단으로 스크롤 이동 여부</li>
+                <li><strong>description</strong>: 입력한 index 패널 오픈</li>
+            </ul>
+        </li>
+        <li><strong>destroy</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화</li>
+            </ul>
+        </li>
+        <li><strong>reInit</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화 후 재생성 <strong>ex) 비동기로 아코디언이 추가 된 경우 사용</strong></li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="sticky">Sticky</h2>
+    <p>Sticky는 지정한 target에 스크롤 시 브라우저 상단에 고정된 상태로 따라다니는 플러그인 입니다.</p>
+    <h3 id="basic-code">Basic Code</h3>
+    <pre><code class="lang-html">&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"pualugin-sticky__section"</span> data-element=<span class="hljs-string">"sticky"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-sticky__header"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"sticky__target-parent"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-sticky__target"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"sticky__target"</span>&gt;</span>Section1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/section&gt;</span>
+</code></pre>
+    <h3 id="basic-code-options">Basic Code + Options</h3>
+    <pre><code class="lang-html"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-sticky__section"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"sticky"</span> <span class="hljs-attr">data-options</span>=<span class="hljs-string">'</span></span></span><span class="hljs-template-variable">{ "position": "bottom" }</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">'</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-sticky__header"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"sticky__target-parent"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-sticky__target"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"sticky__target"</span>&gt;</span>Section1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+</code></pre>
+    <hr>
+    <p>모든 플러그인은 기본적으로 <strong>페이지 렌더링시 Initialized</strong> 됩니다.<br>
+        <strong>개별적(비동기 마크업 구현) Initialized</strong> 필요한 경우 아래와 같이 진행합니다.</p>
+    <hr>
+    <pre><code class="lang-javascript">$<span class="hljs-comment">('.your-element')</span>.sticky<span class="hljs-comment">()</span>; <span class="hljs-comment">// Initialized</span>
+</code></pre>
+    <h3 id="options">Options</h3>
+    <ul>
+        <li><strong>position</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: top</li>
+                <li><strong>description</strong>: <strong>middle</strong>, <strong>bottom</strong>, 중 선택</li>
+            </ul>
+        </li>
+        <li><strong>top</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 0</li>
+            </ul>
+        </li>
+        <li><strong>activeClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: is-active</li>
+                <li><strong>description</strong>: 원하는 클래스명으로 변경 가능</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="events">Events</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'.your-element'</span>);
+
+yourVariable.on(<span class="hljs-string">'beforeChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, target </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+
+yourVariable.on(<span class="hljs-string">'afterChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, target </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+</code></pre>
+    <ul>
+        <li><strong>beforeChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, target</li>
+                <li><strong>description</strong>: Fixed 전 실행될 함수</li>
+            </ul>
+        </li>
+        <li><strong>afterChange</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, target</li>
+                <li><strong>description</strong>: Fixed 후 실행될 함수</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="method">Method</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'.your-element'</span>).data(<span class="hljs-string">'plugin_sticky'</span>);
+
+yourVariable.destroy();
+
+yourVariable.reInit();
+</code></pre>
+    <ul>
+        <li><strong>destroy</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화</li>
+            </ul>
+        </li>
+        <li><strong>reInit</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화 후 재생성 <strong>ex) 비동기로 아코디언이 추가 된 경우 사용</strong></li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="modal">Modal</h2>
+    <h3 id="basic-code">Basic Code</h3>
+    <pre><code class="lang-html"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--
+      body태그 안에는 무조건 1개의 element만 놓아주세요 ( 1. 아래처럼 #wrap으로 모든 컨텐츠를 감싸주세요. )
+      예외) 단 </span></span><span class="hljs-template-variable">{position: absolute, fixed}</span><span class="xml"><span class="hljs-comment"> </span></span><span class="hljs-template-variable">{visibility: hidden}</span><span class="xml"><span class="hljs-comment"> 과 같이 화면상에 보이지 않는다면 상관 없습니다.
+    --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contents"</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- 모달 버튼: 아무곳에 위치해도 상관 없습니다. --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin__button"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__open"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#modalID"</span>&gt;</span>모달 오픈<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- 모달: 아무곳에 위치해도 상관 없습니다. --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modalID"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__element"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__element"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__container"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__element-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__contents"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__element-contetns"</span>&gt;</span>
+            모달 내용입니다.
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__close"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>닫기<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"footer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span>
+</code></pre>
+    <h3 id="basic-code-options">Basic Code + Options</h3>
+    <pre><code class="lang-html"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"wrap"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--
+      body태그 안에는 무조건 1개의 element만 놓아주세요 ( 1. 아래처럼 #wrap으로 모든 컨텐츠를 감싸주세요. )
+      예외) 단 </span></span><span class="hljs-template-variable">{position: absolute, fixed}</span><span class="xml"><span class="hljs-comment"> </span></span><span class="hljs-template-variable">{visibility: hidden}</span><span class="xml"><span class="hljs-comment"> 과 같이 화면상에 보이지 않는다면 상관 없습니다.
+    --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contents"</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- 모달 버튼: 아무곳에 위치해도 상관 없습니다. --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin__button"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__open"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#modalID"</span>&gt;</span>모달 오픈<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- 모달: 아무곳에 위치해도 상관 없습니다. --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modalID"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__element"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__element"</span> <span class="hljs-attr">data-options</span>=<span class="hljs-string">'</span></span></span><span class="hljs-template-variable">{ "closeExisting": false }</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">'</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__container"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__element-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__contents"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__element-contetns"</span>&gt;</span>
+            모달 내용입니다.
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pualugin-modal__close"</span> <span class="hljs-attr">data-element</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>닫기<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"footer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span>
+</code></pre>
+    <hr>
+    <p>모든 플러그인은 기본적으로 <strong>페이지 렌더링시 Initialized</strong> 됩니다.<br>
+        <strong>개별적(비동기 마크업 구현) Initialized</strong> 필요한 경우 아래와 같이 진행합니다.</p>
+    <hr>
+    <pre><code class="lang-javascript">$<span class="hljs-comment">('.your-element')</span>.modal<span class="hljs-comment">()</span>; <span class="hljs-comment">// Initialized</span>
+</code></pre>
+    <h3 id="options">Options</h3>
+    <ul>
+        <li><strong>wrapperClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: #wrap</li>
+                <li><strong>description</strong>: body 태그 안쪽에 위치할 컨텐츠 wrapper의 아이디입니다.</li>
+            </ul>
+        </li>
+        <li><strong>closeExisting</strong>
+            <ul>
+                <li><strong>type</strong>: Boolean</li>
+                <li><strong>default</strong>: true</li>
+                <li><strong>description</strong>: 기본적으로 1개의 모달만 열립니다, 그러나 동시에 여러 모달의 스택이 필요한 경우 closeExisting 옵션을 false로
+                    설정하면 됩니다.</li>
+            </ul>
+        </li>
+        <li><strong>stackLevel</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 10</li>
+                <li><strong>description</strong>: closeExisting 옵션이 true인 경우(default) 열린 모달에 z-index를 추가합니다.
+                    closeExisting 옵션이 false인 경우 스택이 쌓일 때 설정한 값의 +10씩 모달의 z-index에 추가합니다.</li>
+            </ul>
+        </li>
+        <li><strong>mobileResolution</strong>
+            <ul>
+                <li><strong>type</strong>: Number</li>
+                <li><strong>default</strong>: 1280</li>
+                <li><strong>description</strong>: 모바일 디바이스의 기준 해상도를 정의합니다. 기본적으로 1280px 이하는 모바일로 분류됩니다.</li>
+            </ul>
+        </li>
+        <li><strong>modalClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: pualugin-modal</li>
+                <li><strong>description</strong>: 모달을 감싸고 있는 컨테이너의 class를 설정합니다.</li>
+            </ul>
+        </li>
+        <li><strong>modalMaskClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: pualugin-modal__mask</li>
+                <li><strong>description</strong>: 모달안의 마스크(dimd) class를 설정합니다.</li>
+            </ul>
+        </li>
+        <li><strong>activeClassName</strong>
+            <ul>
+                <li><strong>type</strong>: String</li>
+                <li><strong>default</strong>: is-open</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="events">Events</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'body'</span>);
+
+yourVariable.on(<span class="hljs-string">'modalOpen'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, modal </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+
+yourVariable.on(<span class="hljs-string">'modalClose'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> event, plugin, modal </span>)</span>{
+    <span class="hljs-comment">/* your code ... */</span>
+})
+</code></pre>
+    <ul>
+        <li><strong>modalOpen</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, modal</li>
+                <li><strong>description</strong>: 모달이 열린 후 실행될 함수</li>
+            </ul>
+        </li>
+        <li><strong>modalClose</strong>
+            <ul>
+                <li><strong>Arguments</strong>: event, plugin, modal</li>
+                <li><strong>description</strong>: 모달이 닫힌 후 실행될 함수</li>
+            </ul>
+        </li>
+    </ul>
+    <h3 id="method">Method</h3>
+    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'body'</span>).data(<span class="hljs-string">'plugin_modal'</span>);
+
+yourVariable.open( <span class="hljs-string">'#modal-node-id'</span> ); <span class="hljs-comment">// 모달 열기</span>
+
+yourVariable.close( <span class="hljs-string">'#modal-node-id'</span> ); <span class="hljs-comment">// 모달 닫기</span>
+
+yourVariable.destroy();
+
+yourVariable.reInit();
+
+<span class="hljs-comment">// ajax등 비동기 호출 후 모달을 열거나 닫으려면 아래와 같이 호출하시면 됩니다.</span>
+
+$.ajax({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-comment">// 1. data 처리</span>
+
+    <span class="hljs-comment">// 2. data 처리 후 아래 처럼 모달을 열거나 닫는다. (변수명은 원하는 명칭으로 변경 가능)</span>
+    <span class="hljs-keyword">var</span> yourVariable = $(<span class="hljs-string">'body'</span>).data(<span class="hljs-string">'plugin_modal'</span>);
+    yourVariable.open( <span class="hljs-string">'#modal-node-id'</span> ); <span class="hljs-comment">// 모달 열기</span>
+    yourVariable.close( <span class="hljs-string">'#modal-node-id'</span> ); <span class="hljs-comment">// 모달 닫기</span>
+  }
+})
+</code></pre>
+    <ul>
+        <li><strong>open</strong>
+            <ul>
+                <li><strong>Arguments</strong>: modal(String)</li>
+                <li><strong>description</strong>: 모달 오픈</li>
+            </ul>
+        </li>
+        <li><strong>close</strong>
+            <ul>
+                <li><strong>Arguments</strong>: modal(String)</li>
+                <li><strong>description</strong>: 모달 닫기</li>
+            </ul>
+        </li>
+        <li><strong>destroy</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화</li>
+            </ul>
+        </li>
+        <li><strong>reInit</strong>
+            <ul>
+                <li><strong>Arguments</strong>: none</li>
+                <li><strong>description</strong>: 플러그인 초기화 후 재생성 <strong>ex) 비동기로 모달이 추가 된 경우 사용</strong></li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+
+</html>

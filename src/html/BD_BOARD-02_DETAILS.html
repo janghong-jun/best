@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('../include/meta.html')
+    <title>시청자 게시판 상세 | 명의</title>
+@@include('../include/css.html')
+</head>
+<body>
+@@include('../include/skip.html')
+
+<div id="wrap">
+@@include('../include/header.html')
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <!-- 211108 추가 -->
+                <div class="program-time mobile">
+                    <div class="program-time__title">방송시간</div>
+                    <div class="program-time__list">
+                        <div class="program-time__item">1TV 금요일 밤 9시 50분 <span>본</span></div>
+                        <!-- 숨겨진 컨텐츠 -->
+                        <div class="program-time__toggle-list" data-element="toggle-list">
+                            <div class="program-time__item">1TV 토요일 밤 9시 55분 <span>재</span></div>
+                            <div class="program-time__item">1TV 목요일 오후 2시 10분 <span>전재</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="program-time__anchor" data-element="toggle-btn"><span class="blind">방송시간 더 보기</span></button>
+                </div>
+                <!-- //211108 추가 -->
+                <div class="board-view">
+                    <div class="board-view__title">시청자게시판</div>
+                    <div class="board-view__top">
+                        <div class="board-view__top-title">&lt;명의&gt; &nbsp;2021년 11월 방송 예정 공지입니다.</div>
+                        <div class="board-view__info">
+        					<!-- 211117 기획 수정 -->
+                            <span class="board-view__info-item board-view__name"><img src="../images/common/icon_board_kakao.png" alt="kakao" class="icon-sns">운영자</span>
+                            <span class="board-view__info-item board-view__date">2021. 10. 16</span>
+                            <span class="board-view__info-item board-view__view">조회 3,217</span>
+                        </div>
+                    </div>
+                    <div class="board-view__content">
+                        <!-- 에디터영역 -->
+                        안녕하세요. 명의 헬스케어 입니다.<br>
+                        아래와 같이 11월 방송 할 예정이오니, 이점 참고하시기 바랍니다.<br>
+                        감사합니다.<br><br>
+                        <!-- //에디터영역 -->
+                    </div>
+                    <div class="utill">
+                        <button type="button" class="button button__utill button__utill--share"><span class="blind">공유하기</span></button>
+                        <button type="button" class="button button__utill button__utill--print"><span class="blind">프린트</span></button>
+                        <button type="button" class="button button__utill button__utill--report"><span class="blind">신고하기</span></button>
+                    </div>
+                    <!-- 211125 추가 -->
+                    <!-- 게시글 이동 사유 -->
+                    <div class="move-reason desktop">
+                        <div class="move-reason__title">해당 게시글은 아래의 사유로 이동되었습니다</div>
+                        <div class="move-reason__text">게시판 형식에 맞지 않는 게시글입니다</div>
+                    </div>
+                    <!-- //게시글 이동 사유 -->
+                    <!-- 게시글 복구시 -->
+                    <div class="move-reason desktop">
+                        <div class="move-reason__title">해당 게시글은 아래의 사유로 이동되었습니다</div>
+                        <div class="move-reason__text">게시판 형식에 맞지 않는 게시글입니다</div>
+                        <div class="move-reason__restore">
+                            <div class="move-reason__restore-text">이동 전 위치 : 시청자게시판(일반 게시판)</div>
+                            <button type="button" class="button button__gray-square">게시글 복구</button>
+                        </div>
+                    </div>
+                    <!-- //게시글 복구시 -->
+                    <!-- //211125 추가 -->
+                    <div class="board-list">
+                        <div class="board-list__item">
+                            <div class="board-list__control board-list__control--prev">이전 글</div>
+                            <a href="#" class="board-list__title">이전 글이 없습니다.</a>
+                            <!-- 글이 없는 경우 -->
+                            <!-- <span class="board-list__title">이전 글이 없습니다.</span> -->
+                        </div>
+                        <div class="board-list__item">
+                            <div class="board-list__control board-list__control--next">다음 글</div>
+                            <a href="#" class="board-list__title">다음 글이 없습니다.</a>
+                            <!-- 글이 없는 경우 -->
+                            <!-- <span class="board-list__title">다음 글이 없습니다.</span> -->
+                        </div>
+                    </div>
+                    <!-- 211109 수정 -->
+                    <div class="button-wrap button-wrap--right">
+                        <div class="button-wrap__left">
+                            <select class="selectbox">
+                                <option>선택</option>
+                                <option>명의 전문의</option>
+                                <option>공지사항</option>
+                            </select>
+                            <button type="button" class="button button__gray-square">게시글 이동</button>
+                        </div>
+                        <a href="#" class="button button__round desktop">블라인드</a>
+                        <a href="#" class="button button__round">답글</a>
+                        <a href="#" class="button button__round">목록으로</a>
+                    </div>
+                    <!-- //211109 수정 -->
+                    <!-- 211123 추가 -->
+                    <div class="board-move">
+                        <div class="board-move__text">게시글 이동 사유를 입력해주세요 (해당 내용은 사용자에게 노출됩니다)</div>
+                        <div class="board-move__input-wrap">
+                            <input type="text" class="board-move__input" title="사유 입력">
+                            <button type="button" class="board-move__anchor"><span>확인</span></button>
+                        </div>
+                    </div>
+                    <!-- //211123 추가 -->
+                    <div class="comment">
+                        <div class="comment__total">
+                            <div class="comment__title">댓글</div>
+                            <div class="comment__number">총 <span>2</span>개</div>
+                        </div>
+    
+                        <!-- 로그인 전 -->
+                        <div class="comment__form">
+                            <div class="comment__wrap">
+                                <button type="button" class="comment__textarea">댓글을 남기려면 로그인 해주세요</button>
+                            </div>
+                            <button type="button" class="comment__submit">등록</button>
+                            <div class="comment-sns">
+                                <span class="comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></span>
+                                <span class="comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></span>
+                                <span class="comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></span>
+                            </div>
+                        </div>                        
+                        <!-- 로그인 후 -->
+                        <div class="comment__form" style="display: none;">
+                            <div class="comment__wrap">
+                                <div class="comment__info">
+                                    <div class="comment__writer">홍길동</div>
+                                    <div class="comment__bytes"><span>0</span>/250 bytes</div>
+                                </div>
+                                <textarea class="comment__textarea" title="댓글 입력" placeholder="댓글을 입력해주세요"></textarea>
+                            </div>
+                            <button type="button" class="comment__submit">등록</button>
+                            <div class="comment-sns">
+                                <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--ebs"><span class="blind">EBS</span></button>
+                                <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--facebook"><span class="blind">페이스북</span></button>
+                                <button type="button" class="comment-sns__anchor comment-sns__icon comment-sns__icon--kakao"><span class="blind">카카오스토리</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 211116 기획 수정 -->
+                    <div class="comment-sort">
+                        <div class="comment-sort__item"><a href="#" class="comment-sort__anchor is-active">최신순</a></div>
+                        <div class="comment-sort__item"><a href="#" class="comment-sort__anchor">인기순</a></div>
+                    </div>
+                    <!-- //211116 기획 수정 -->
+                    <div class="comment-list">
+                        <div class="comment-list__item">
+                            <div class="comment-list__info">
+                                <span class="comment-list__info-item comment-list__name">박**</span>
+                                <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                                <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                            </div>
+                            <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                            <div class="comment-like">
+                                <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                                <div class="comment-like__count">0</div>
+                            </div>
+                        </div>
+                        <div class="comment-list__item">
+                            <div class="comment-list__info">
+                                <span class="comment-list__info-item comment-list__name">박**</span>
+                                <span class="comment-list__info-item comment-list__date">2021. 09. 01</span>
+                                <a href="#" class="comment-list__info-item  comment-list__anchor">신고</a>
+                            </div>
+                            <div class="comment-list__text">좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.좋은 정보 잘 보았습니다.</div>
+                            <div class="comment-like is-active">
+                                <button type="button" class="comment-like__anchor"><span class="blind">좋아요!</span></button>
+                                <div class="comment-like__count">2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 211109 추가 -->
+                    <div class="pagination">
+                        <!-- 비활성화시 disabled class 추가 -->
+                        <button class="pagination__arrow pagination__arrow--first disabled" type="button"><span class="hide">첫페이지</span></button>
+                        <button class="pagination__arrow pagination__arrow--prev disabled" type="button"><span class="hide">이전페이지</span></button>
+                        <div class="pagination__number-area">
+                            <!-- 현재 페이지 is-active 클래스 추가 및 strong 태그 -->
+                            <strong class="pagination__number is-active">01</strong>
+                            <a href="#" class="pagination__number">02</a>
+                        </div>
+                        <!-- 비활성화시 disabled class 추가 -->
+                        <button class="pagination__arrow pagination__arrow--next" type="button"><span class="hide">다음페이지</span></button>
+                        <button class="pagination__arrow pagination__arrow--last" type="button"><span class="hide">마지막 페이지</span></button>
+                    </div>
+                    <!-- //211109 추가 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+@@include('../include/footer.html')
+</div>
+<!-- e : wrap -->
+</body>
+@@include('../include/script.html')
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+@@include('../include/meta.html')
+    <!-- 211116 기획 수정 -->
+    <title>명의에게 묻는다 목록 | 명의</title>
+@@include('../include/css.html')
+</head>
+<body>
+@@include('../include/skip.html')
+
+<div id="wrap">
+@@include('../include/header.html')
+
+    <div id="container" class="container">
+        <div class="section">
+            <div class="section__inner">
+                <!-- 211108 추가 -->
+                <div class="program-time mobile">
+                    <div class="program-time__title">방송시간</div>
+                    <div class="program-time__list">
+                        <div class="program-time__item">1TV 금요일 밤 9시 50분 <span>본</span></div>
+                        <!-- 숨겨진 컨텐츠 -->
+                        <div class="program-time__toggle-list" data-element="toggle-list">
+                            <div class="program-time__item">1TV 토요일 밤 9시 55분 <span>재</span></div>
+                            <div class="program-time__item">1TV 목요일 오후 2시 10분 <span>전재</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="program-time__anchor" data-element="toggle-btn"><span class="blind">방송시간 더 보기</span></button>
+                </div>
+                <!-- //211108 추가 -->
+                <!-- 211116 기획 수정 -->
+                <div class="title-main">
+                    명의에게 묻는다<span></span>
+                    <!-- 211104추가 -->
+                    <div class="check-wrap">
+                        <div class="check-wrap__item">
+                            <input type="checkbox" class="input-checkbox" id="name">
+                            <label for="name" class="check-wrap__label">작성자</label>
+                        </div>
+                        <div class="check-wrap__item">
+                            <input type="checkbox" class="input-checkbox" id="title">
+                            <label for="title" class="check-wrap__label">제목&amp;내용</label>
+                        </div>
+                    </div>
+                    <!-- 211104추가 -->
+                    <div class="search-contents">
+                        <input type="text" class="search-contents__item" title="검색어 입력" placeholder="게시글을 검색하세요">
+                        <button type="button" class="search-contents__anchor"><span class="blind">게시글 검색</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__inner">
+                <!-- 211118 기획수정 -->
+                <!-- 관리자 로그인시 caution--admin 추가 -->
+                <div class="caution caution--admin">
+                    <div class="caution__wrap">
+                        <div class="caution__text">욕설, 비방, 광고 및 게시판 운영 목적과 직접적인 관련이 없는 게시물은 관리자에 의해 삭제됩니다.
+                            <span class="caution__important">깨끗하고 기분 좋은 게시판이 될 수 있도록 같이 노력해 주세요.</span>
+                        </div>
+                    </div>
+                    <a href="#" class="button button__gray-square button__gray-square--arrow">EBS 게시판 이용수칙<span class="bold">자세히 보기</span></a>
+                    <div class="button-wrap">
+                        <a href="#" class="button button__gray-square">신고 게시글 보기</a>
+                        <a href="#" class="button button__gray-square">신고 댓글 보기</a>
+                    </div>
+                </div>
+                <!-- //211118 기획수정 -->
+                <table class="table notice">
+                    <colgroup>
+                        <col style="width:120px">
+                        <col style="width:auto" class="table-mobile">
+                        <col style="width:130px">
+                        <col style="width:130px" class="table-mobile">
+                        <col style="width:130px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="table__th">번호</th>
+                            <th class="table__th table-mobile">제목</th>
+                            <th class="table__th">작성자</th>
+                            <th class="table__th table-mobile">등록일</th>
+                            <th class="table__th">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table__important">
+                            <td class="table__td"><div class="table__number">공지</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">11월 19일에 방송 예정인 &lt;공비만&gt;편 사례자를 모집합니다</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr class="table__important">
+                            <td class="table__td"><div class="table__number">공지</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">홈페이지가 개편 되었습니다</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5010</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 10월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5009</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 9월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5008</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 8월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5007</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 7월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5006</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 6월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5005</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 5월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5004</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 4월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5003</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 3월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5002</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 2월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                        <tr>
+                            <td class="table__td"><div class="table__number">5001</div></td>
+                            <td class="table__td table-mobile"><a href="#" class="table__anchor">&lt;명의&gt; 2021년 1월 방송 예정 공지입니다.</a></td>
+                            <td class="table__td"><div class="table__name">운영자</div></td>
+                            <td class="table__td table-mobile"><div class="table__date">2021.08.27</div></td>
+                            <td class="table__td"><div class="table__count">100</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 211104 수정 -->
+                <!-- 211108 수정 -->
+                <div class="button-wrap button-wrap--right button-wrap--pagination">
+                    <a href="#" class="button button__round button__round--blue">등록</a>
+                </div>
+                <!-- //211108 수정 -->
+                <div class="pagination">
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--first disabled" type="button"><span class="hide">첫페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--prev disabled" type="button"><span class="hide">이전페이지</span></button>
+                    <div class="pagination__number-area">
+                        <!-- 현재 페이지 is-active 클래스 추가 및 strong 태그 -->
+                        <strong class="pagination__number is-active">01</strong>
+                        <a href="#" class="pagination__number">02</a>
+                        <a href="#" class="pagination__number">03</a>
+                        <a href="#" class="pagination__number">04</a>
+                        <a href="#" class="pagination__number">05</a>
+                    </div>
+                    <!-- 비활성화시 disabled class 추가 -->
+                    <button class="pagination__arrow pagination__arrow--next" type="button"><span class="hide">다음페이지</span></button>
+                    <button class="pagination__arrow pagination__arrow--last" type="button"><span class="hide">마지막 페이지</span></button>
+                </div>
+                <!-- //211104 수정 -->
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__inner">
+                <div class="banner">
+                    <a href="#" class="banner__anchor"><img src="../images/img_banner.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e : container -->
+
+@@include('../include/footer.html')
+</div>
+<!-- e : wrap -->
+</body>
+@@include('../include/script.html')
+</html>
